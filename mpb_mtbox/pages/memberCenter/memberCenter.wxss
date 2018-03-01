@@ -1,0 +1,38 @@
+page{background: #f2f2f2;}
+
+.mobileLogin{width: 100%;padding:31.2px 10.4px;background:url(https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/mobileLogin_bg.jpg) no-repeat 0 0;background-size: 100% 122.72px;text-align: center;box-sizing: border-box;-webkit-box-sizing: border-box;}
+.mobileLogin>.logBtn{width: 96.72px;height: 30.16px;background-color: #5DAE98;border: 2px solid #FFFFFF;border-radius: 5px;color: white;display:block;position: absolute;top:50%;left: 50%;margin-top:-15.08px;margin-left:-48.36px}
+.personInfo,.personInfo1{position: relative;display:flex;color:#fff;}
+.Info{padding-top:7.8px;text-align: left;}
+.portraitWrap{float:left;width: 52px;height: 52px;margin-right:15.6px;border-radius: 50%;background:#fff;overflow: hidden;}
+.portraitWrap image{width: 52px;height: 52px;border-radius: 50%;}
+.personInfo:after{content:"";position:absolute;right: 0;top: 20.8px;width:6.24px;height:6.24px;border-top:2px solid #fff;border-right:2px solid #fff;transform: rotate(45deg);-webkit-transform:rotate(45deg);}
+
+
+
+.userState{height: 44.2px;line-height:44.2px;margin: 10.4px;padding:0 10.4px 0 5.2px;border: 1px solid #5DAE98;border-radius: 5px;background-color: #FFFFFF;}
+.userState image{width: 19.76px; height: 19.5px;margin:-7px  1px 0 0;vertical-align: middle;}
+.userState .upgradeMem{color:#E74F5C;position: relative;padding-right:10.4px;}
+.userState .upgradeMem .p{font-size:9.36px;}
+.userState .upgradeMem .p:before{ content: ' ';position: absolute; top: 17.16px;right: 0; width: 6.76px; height: 6.76px; border-left: 2px solid #8d8d8d;border-top: 2px solid #8d8d8d;-webkit-transform: rotate(135deg); transform: rotate(135deg);}
+.userInfo{padding:0 10.4px;margin-bottom: 10.4px;background-color: #fff;}
+.userDynamic{padding:0 10.4px;background-color: #fff;}
+.userMenu{padding-bottom: 36.4px;}
+.userMenu ul li{height: 41.6px;line-height: 41.6px;border-bottom: 1px solid #eee;position: relative;}
+.userMenu ul li>navigator{display:block;color:#1A1A1A;}
+.userMenu ul .jt:after{content: ' ';position: absolute; top: 17.16px;right: 0; width: 6.76px; height: 6.76px; border-left: 2px solid #8d8d8d;border-top: 2px solid #8d8d8d;-webkit-transform: rotate(135deg); transform: rotate(135deg);}
+.userMenu image{margin-right: 10.4px;margin-top: -2px;}
+.userMenu .myList image{width:14.04px;height:14.04px;margin-top: -3px;}
+.userMenu .myOrder image{width:12.48px;height: 12.48px;}
+.userMenu .myCollect image{width:15.6px;height: 14.56px;}
+.userMenu .myCoupon{border: none;}
+.userMenu .myCoupon image{width:15.08px;height: 15.08px;}
+.userMenu .inviteFriends image{width: 13px;height: 15.6px;}
+.userMenu .advices image{width: 14.56px;height: 14.56px;}
+.userMenu .question image{width: 14.56px;height: 15.08px;}
+.userMenu .contact image{width: 14.56px;height: 15.6px;}
+.userMenu .contact>span{margin-left: 52px;font-size: 15.6px;}
+
+
+.signOut{padding:0 10.4px;margin-top:10px;}
+.signOutBtn{width: 100%;height: 41.6px;line-height:41.6px;background-color: #5DAE98;font-size: 18.72px;border: none;color: white;}

@@ -1,0 +1,89 @@
+<!-- tit start -->
+<view class="memTil seniorMem">
+  <p class="p_vip">享玩VIP高级会员
+      <image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/purchase/whiteStar.png'/>
+      <image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/purchase/whiteStar.png'/>
+      <image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/purchase/whiteStar.png'/>
+      <image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/purchase/whiteStar.png'/>
+      <image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/purchase/whiteStar.png'/>
+  </p>
+  <p>可同时玩1-5件累计5<image class='smallStar' src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/icon_sstar.png'/>的玩具，押金700元</p>
+</view> 
+<view class="memClassify clearfix">
+    <block wx:for="{{commonPlanList}}" wx:key="planId" wx:for-item="memberPlan">
+          <view class="monthCard {{linum==index?'seniorCurrent':''}}" bindtap="selectMe" data-changecount='{{memberPlan.changeCount}}' data-planid='{{memberPlan.planId}}'  data-linum='{{index}}' data-money='{{memberPlan.servicePrice/100}}'>
+            <p class="card">{{memberPlan.planName}}</p>
+            <p class="cardPrice"><span>￥</span>{{memberPlan.servicePrice/100 }}</p>
+            <block wx:if="{{memberPlan.temp2 != null}}">
+                <p class="avg_price">（{{memberPlan.temp2}}）</p>
+            </block>
+            <p class="free_door">含<span class="changeCount">{{memberPlan.changeCount }}</span>次免费上门服务</p>
+          </view>
+    </block>
+</view>
+
+<!-- tit end -->
+<!-- 会员权益start -->
+ <view class="memBenefit">
+	<view class="memBenefitTil">
+	   <view class="lineThrough fn-left"></view>
+	   <view class="tilWord">会员权益</view>
+	   <view class="lineThrough fn-right"></view>
+	</view>
+	<!-- 权益内容start -->
+	<view class="memBenefitCon">
+		<ul class="clearfix">
+			<li class="leaseNum">
+				<p><image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/sBear.png'/></p>
+				<p>可同时玩1-{{gridCount}}件玩具</p>
+			</li>
+			<li class="starLevel">
+				<p><image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/Sstar.png'/></p>
+				<p class="li-second">每次玩具总计{{gridCount}}<image class="sstar" src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/icon_sstar.png'/></p>
+			</li>
+			<li class="leaseValue">
+				<p><image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/Smoney.png'/></p>
+				<p>每次玩具价值约2000元</p>
+			</li>
+			<li class="unlimitNum ">
+				<p><image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/Scount.png'/></p>
+				<p>不限更换次数</p>
+			</li>
+			<li class="freight">
+				<p><image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/Struck.png'/></p>
+				<p>配送费减免{{changeCount}}次</p>
+			</li>
+		</ul>
+	</view>
+ </view>
+<!-- 会员权益end-->
+
+<!-- 使用说明start -->
+ <view class="useIllustrate">
+	<view class="useIllustrateTil">
+	   <view class="lineThrough fn-left"></view>
+	   <view class="tilWord">使用说明</view>
+	   <view class="lineThrough fn-right"></view>
+	</view>
+	<view class="useIllustrateCon">
+		<ul>
+			<li><view><view class='li_disc'></view>您可以同时免费玩1-{{gridCount}}件玩具，无任何租金，不限更换次数；</view></li>
+			<li><view><view class='li_disc'></view>每次最多可玩总计{{gridCount}}星标玩具(即带“<image class="sstar_img" src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/icon_sstar.png' width="6.76px" />”的玩具)； </view></li>
+			<li><view><view class='li_disc'></view>随卡赠送{{changeCount}}张免费配送券，免费配送券用完后换玩具需支付一定运费；</view></li>
+			<li><view><view class='li_disc'></view>随时申请退款(月会员和礼品券不支持退款)，更多细则请参考<navigator class="green" url="/pages/monthMemProtocol/monthMemProtocol">《服务协议》</navigator></view></li>
+			<li><view><view class='li_disc'></view>微损免赔，仅当玩具重要功能损坏/丢失时须有一定赔偿，详情请参考<navigator class="green" url="/pages/leaseProtocol/leaseProtocol">《租赁协议》</navigator></view></li>
+		</ul>
+	</view>
+ </view>
+ <!-- 使用说明end -->
+ 
+ <!-- 提交订单start  -->
+	 <view class="footFixed">
+		<view class="footer memfooter">
+			<view class="placeOrder ">
+				<view class="fn-left payables">应付款：<view class='red' style='display:inline'>¥{{money}}</view></view>
+				<button class="fn-right placeOrderBtn" >提交订单</button>
+			</view>
+		</view>   
+	</view>
+ <!-- 提交订单end  -->

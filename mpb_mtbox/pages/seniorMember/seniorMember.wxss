@@ -1,0 +1,5 @@
+@import "/pages/commonMember/commonMember.wxss";
+.seniorMem{background: url(http://www.72toy.com/mpb_mtbox/v/v3/share/images/purchase/senior_bg.jpg)  no-repeat left center;background-size: 100%;height: 93.6px}
+.memClassify .seniorCurrent{background-color: #e2a73a;}
+.memClassify .seniorCurrent p{color: white;}
+.memClassify .monthCard{float:left;width:48%;margin:3px 1%;height:90px;border: 1px solid #e2a73a;box-sizing: border-box;border-radius: 5.2px;}

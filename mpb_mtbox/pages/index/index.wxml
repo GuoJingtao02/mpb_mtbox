@@ -1,0 +1,570 @@
+<!--index.wxml-->
+<view>
+  <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="{{indicator_active_color}}" style='height:200px'>
+  <image class='logo-img' src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/logo.png'/>
+    <swiper-item>
+    <navigator url='/pages/selPlan/selPlan'>
+      <image src="https://www.72toy.com/mpb_mtbox/v/v3/share/images/index/banner2.jpg" data-index="0"  bindload="imageLoad" class="slide-image" style="width:{{ images[0].width }}rpx; height:{{ images [0].height }}rpx;" />
+      </navigator>
+    </swiper-item>
+  
+    <swiper-item>
+    <navigator url='/pages/coupon/coupon'>
+      <image src="https://www.72toy.com//mpb_mtbox/v/v3/share/images/index/banner3.jpg" data-index="1"  bindload="imageLoad" class="slide-image" style="width:{{ images[1].width }}rpx; height:{{ images [1].height }}rpx;" />
+    </navigator>
+    </swiper-item>
+  
+  </swiper>
+</view>
+<view class='navItem'>
+  <ul class='clearfix'>
+    <li><image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/brand.png'/><p>品牌玩具</p></li>
+		<li><image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/medical.png'/><p>医疗消毒</p></li>
+		<li><image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/change.png'/><p>随心更换</p></li>
+		<li class="doorService"><image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/door.png'/><p>上门服务</p></li>
+  </ul>
+</view>
+<view class='perfectBaByInfo'>
+	<view class='memberWrap clearfix'>
+    <navigator url='/pages/commonMember/commonMember'>
+      <view class='commonMember fn-left' >
+        <view class='h3'>【享  玩】VIP标准会员</view>
+        <view class='memBenefit'>
+          <p>每次1-3件玩具</p>
+          <p>（价值约1000元）</p>
+          <p>不限更换次数</p>
+        </view>
+        <p class="price"> <span>¥</span>154/月起</p>
+      </view>
+    </navigator >
+    <navigator url='/pages/seniorMember/seniorMember'>
+		  <view class="seniorMember fn-right">
+        <view class='h3'>【享  玩】VIP高级会员</view>
+        <view class="memBenefit">
+          <p>每次1-5件玩具</p>
+          <p>（价值约2000元）</p>
+          <p>不限更换次数</p>
+        </view>
+        <p class="price"> <span>¥</span>243/月起</p>
+      </view>
+    </navigator>
+	</view>
+</view>
+
+<view class="newShelves">
+	<view class="title">
+		<view class="leftLine"></view>
+		<view class="titleWord">最新上架</view>
+		<view class="rightLine"></view>
+		<p class="explain">尝鲜最新好玩的玩具</p>
+	</view>
+  <view class="content clearfix">
+		<ul>
+      <block wx:for="{{reduceGoods}}" wx:key="goodsId"  wx:for-item="item">
+        <block wx:if="{{item.goodsId != null && index < 8}}">
+        <navigator url='/pages/proDetail/proDetail?goodsId={{item.goodsId}}'>
+         <li style='width: 40%;padding: 8px 5%;float: left;'>
+            <view class="proItem">
+              <view class="proImgWrap">
+                <block wx:for="{{item.images}}" wx:key="id" wx:for-item="image" wx:for-index="image_index">
+                  <block wx:if="{{image_index==0}}">
+                    <image class='proImg' src='http://img1.72toy.com/mpb_mtbox{{image.urlPrefix}}_x.jpg'/>
+                  </block>
+                </block>
+                <block wx:if="{{item.product.brand.logoImageUrlPrefix != null}}">
+                  <image class='proLogo' src='http://img1.72toy.com/mpb_mtbox{{item.product.brand.logoImageUrlPrefix}}_100x100.png'/>
+                </block>
+							</view>
+              <view class="proItemInfo">
+							   		<p class="proName">{{item.title}}</p>
+								   	<p class="proPrice">
+						    			<view>
+                        
+                          <image wx:for="{{item.product.rentSize}}" wx:key="item" src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png' class='starImg' />
+                       
+                        <view class="fn-right red" style="margin-right: 12px;">{{item.product.forAgeDescription}}</view>
+									   	</view>
+								   	</p>
+						   </view>
+            </view>
+         </li>
+         </navigator>
+        </block>
+      </block>
+    </ul>
+  </view>
+</view>
+ 
+ <view class="newShelves">
+	<view class="title">
+		<view class="leftLine"></view>
+		<view class="titleWord">会员特惠</view>
+		<view class="rightLine"></view>
+		<p class="explain">别错过限时降星的好玩具</p>
+	</view>
+  <view class="content clearfix">
+		<ul>
+      <block wx:for="{{newGoods}}" wx:key="goodsId"  wx:for-item="item">
+        <block wx:if="{{item.goodsId != null && index < 8}}">
+           <navigator url='/pages/proDetail/proDetail?goodsId={{item.goodsId}}'>
+         <li style='width: 40%;padding: 8px 5%;float: left;'>
+            <view class="proItem">
+              <view class="proImgWrap">
+                <block wx:for="{{item.images}}" wx:key="id" wx:for-item="image" wx:for-index="image_index">
+                  <block wx:if="{{image_index==0}}">
+                    <image class='proImg' src='http://img1.72toy.com/mpb_mtbox{{image.urlPrefix}}_x.jpg'/>
+                  </block>
+                </block>
+                <block wx:if="{{item.product.brand.logoImageUrlPrefix != null}}">
+                  <image class='proLogo' src='http://img1.72toy.com/mpb_mtbox{{item.product.brand.logoImageUrlPrefix}}_100x100.png'/>
+                </block>
+							</view>
+              <view class="proItemInfo">
+							   		<p class="proName">{{item.title}}</p>
+								   	<p class="proPrice">
+						    			<view>
+                        
+                          <image wx:for="{{item.product.rentSize}}" wx:key="item" src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png' class='starImg' />
+                        
+                        <view class="fn-right red" style="margin-right: 12px;">{{item.product.forAgeDescription}}</view>
+									   	</view>
+								   	</p>
+						   </view>
+            </view>
+         </li>
+         </navigator>
+        </block>
+      </block>
+    </ul>
+  </view>
+</view>
+
+<view class="newShelves">
+	<view class="title">
+		<view class="leftLine"></view>
+		<view class="titleWord">热门玩具</view>
+		<view class="rightLine"></view>
+		<p class="explain">看看其他宝宝都在租什么</p>
+	</view>
+  <view class="content clearfix">
+		<ul>
+      <block wx:for="{{hotGoods}}" wx:key="goodsId"  wx:for-item="item">
+        <block wx:if="{{item.goodsId != null && index < 8}}">
+         <navigator url='/pages/proDetail/proDetail?goodsId={{item.goodsId}}'>
+         <li style='width: 40%;padding: 8px 5%;float: left;'>
+            <view class="proItem">
+              <view class="proImgWrap">
+                 <block wx:for="{{item.images}}" wx:key="id" wx:for-item="image" wx:for-index="image_index">
+                  <block wx:if="{{image_index==0}}">
+                    <image class='proImg' src='http://img1.72toy.com/mpb_mtbox{{image.urlPrefix}}_x.jpg'/>
+                  </block>
+                </block>
+                <block wx:if="{{item.product.brand.logoImageUrlPrefix != null}}">
+                  <image class='proLogo' src='http://img1.72toy.com/mpb_mtbox{{item.product.brand.logoImageUrlPrefix}}_100x100.png'/>
+                </block>
+							</view>
+              <view class="proItemInfo">
+							   		<p class="proName">{{item.title}}</p>
+								   	<p class="proPrice">
+						    			<view>
+                       
+                          <image wx:for="{{item.product.rentSize}}"  wx:key="item" src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png' class='starImg' />
+                        
+                        <view class="fn-right red" style="margin-right: 12px;">{{item.product.forAgeDescription}}</view>
+									   	</view>
+								   	</p>
+						   </view>
+            </view>
+         </li>
+         </navigator>
+        </block>
+      </block>
+    </ul>
+  </view>
+</view>
+
+<view class="newShelves">
+	<view class="title">
+		<view class="leftLine"></view>
+		<view class="titleWord">大型玩具</view>
+		<view class="rightLine"></view>
+		<p class="explain"></p>
+	</view>
+  <view class="content clearfix">
+		<ul>
+      <block wx:for="{{bigGoods}}" wx:key="goodsId"  wx:for-item="item">
+        <block wx:if="{{item.goodsId != null && index < 8}}">
+         <navigator url='/pages/proDetail/proDetail?goodsId={{item.goodsId}}'>
+         <li style='width: 40%;padding: 8px 5%;float: left;'>
+            <view class="proItem">
+              <view class="proImgWrap">
+                 <block wx:for="{{item.images}}" wx:key="id" wx:for-item="image" wx:for-index="image_index">
+                  <block wx:if="{{image_index==0}}">
+                    <image class='proImg' src='http://img1.72toy.com/mpb_mtbox{{image.urlPrefix}}_x.jpg'/>
+                  </block>
+                </block>
+                <block wx:if="{{item.product.brand.logoImageUrlPrefix != null}}">
+                  <image class='proLogo' src='http://img1.72toy.com/mpb_mtbox{{item.product.brand.logoImageUrlPrefix}}_100x100.png'/>
+                </block>
+							</view>
+              <view class="proItemInfo">
+							   		<p class="proName">{{item.title}}</p>
+								   	<p class="proPrice">
+						    			<view>
+                        
+                          <image wx:for="{{item.product.rentSize}}" wx:key="item" src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png' class='starImg' />
+                       
+                        <view class="fn-right red" style="margin-right: 12px;">{{item.product.forAgeDescription}}</view>
+									   	</view>
+								   	</p>
+						   </view>
+            </view>
+         </li>
+         </navigator>
+        </block>
+      </block>
+    </ul>
+  </view>
+</view>
+
+<view class="newShelves">
+	<view class="title">
+		<view class="leftLine"></view>
+		<view class="titleWord">音乐/艺术</view>
+		<view class="rightLine"></view>
+		<p class="explain"></p>
+	</view>
+  <view class="content clearfix">
+		<ul>
+      <block wx:for="{{musicGoods}}" wx:key="goodsId"  wx:for-item="item">
+        <block wx:if="{{item.goodsId != null && index < 8}}">
+         <navigator url='/pages/proDetail/proDetail?goodsId={{item.goodsId}}'>
+         <li style='width: 40%;padding: 8px 5%;float: left;'>
+            <view class="proItem">
+              <view class="proImgWrap">
+                <block wx:for="{{item.images}}" wx:key="id" wx:for-item="image" wx:for-index="image_index">
+                  <block wx:if="{{image_index==0}}">
+                    <image class='proImg' src='http://img1.72toy.com/mpb_mtbox{{image.urlPrefix}}_x.jpg'/>
+                  </block>
+                </block>
+                <block wx:if="{{item.product.brand.logoImageUrlPrefix != null}}">
+                  <image class='proLogo' src='http://img1.72toy.com/mpb_mtbox{{item.product.brand.logoImageUrlPrefix}}_100x100.png'/>
+                </block>
+							</view>
+              <view class="proItemInfo">
+							   		<p class="proName">{{item.title}}</p>
+								   	<p class="proPrice">
+						    			<view>
+                        
+                          <image wx:for="{{item.product.rentSize}}" wx:key="item" src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png' class='starImg' />
+                        
+                        <view class="fn-right red" style="margin-right: 12px;">{{item.product.forAgeDescription}}</view>
+									   	</view>
+								   	</p>
+						   </view>
+            </view>
+         </li>
+         </navigator>
+        </block>
+      </block>
+    </ul>
+  </view>
+</view>
+
+<view class="newShelves">
+	<view class="title">
+		<view class="leftLine"></view>
+		<view class="titleWord">轨道/拼搭</view>
+		<view class="rightLine"></view>
+		<p class="explain"></p>
+	</view>
+  <view class="content clearfix">
+		<ul>
+      <block wx:for="{{guidaoGoods}}" wx:key="goodsId"  wx:for-item="item">
+        <block wx:if="{{item.goodsId != null && index < 8}}">
+           <navigator url='/pages/proDetail/proDetail?goodsId={{item.goodsId}}'>
+         <li style='width: 40%;padding: 8px 5%;float: left;'>
+            <view class="proItem">
+              <view class="proImgWrap">
+                 <block wx:for="{{item.images}}" wx:key="id" wx:for-item="image" wx:for-index="image_index">
+                  <block wx:if="{{image_index==0}}">
+                    <image class='proImg' src='http://img1.72toy.com/mpb_mtbox{{image.urlPrefix}}_x.jpg'/>
+                  </block>
+                </block>
+                <block wx:if="{{item.product.brand.logoImageUrlPrefix != null}}">
+                  <image class='proLogo' src='http://img1.72toy.com/mpb_mtbox{{item.product.brand.logoImageUrlPrefix}}_100x100.png'/>
+                </block>
+							</view>
+              <view class="proItemInfo">
+							   		<p class="proName">{{item.title}}</p>
+								   	<p class="proPrice">
+						    			<view>
+                        
+                          <image wx:for="{{item.product.rentSize}}" wx:key="item" src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png' class='starImg' />
+                       
+                        <view class="fn-right red" style="margin-right: 12px;">{{item.product.forAgeDescription}}</view>
+									   	</view>
+								   	</p>
+						   </view>
+            </view>
+         </li>
+         </navigator>
+        </block>
+      </block>
+    </ul>
+  </view>
+</view>
+
+<view class="newShelves">
+	<view class="title">
+		<view class="leftLine"></view>
+		<view class="titleWord">安睡畅玩(0-6月)</view>
+		<view class="rightLine"></view>
+		<p class="explain">安睡畅玩 促进宝宝感官发育</p>
+	</view>
+  <view class="content clearfix">
+		<ul>
+      <block wx:for="{{tangzheGoods}}" wx:key="goodsId"  wx:for-item="item">
+        <block wx:if="{{item.goodsId != null && index < 8}}">
+         <navigator url='/pages/proDetail/proDetail?goodsId={{item.goodsId}}'>
+         <li style='width: 40%;padding: 8px 5%;float: left;'>
+            <view class="proItem">
+              <view class="proImgWrap">
+                 <block wx:for="{{item.images}}" wx:key="id" wx:for-item="image" wx:for-index="image_index">
+                  <block wx:if="{{image_index==0}}">
+                    <image class='proImg' src='http://img1.72toy.com/mpb_mtbox{{image.urlPrefix}}_x.jpg'/>
+                  </block>
+                </block>
+                <block wx:if="{{item.product.brand.logoImageUrlPrefix != null}}">
+                  <image class='proLogo' src='http://img1.72toy.com/mpb_mtbox{{item.product.brand.logoImageUrlPrefix}}_100x100.png'/>
+                </block>
+							</view>
+              <view class="proItemInfo">
+							   		<p class="proName">{{item.title}}</p>
+								   	<p class="proPrice">
+						    			<view>
+                        
+                          <image wx:for="{{item.product.rentSize}}" wx:key="item" src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png' class='starImg' />
+                        
+                        <view class="fn-right red" style="margin-right: 12px;">{{item.product.forAgeDescription}}</view>
+									   	</view>
+								   	</p>
+						   </view>
+            </view>
+         </li>
+         </navigator>
+        </block>
+      </block>
+    </ul>
+  </view>
+</view>
+
+
+<view class="newShelves">
+	<view class="title">
+		<view class="leftLine"></view>
+		<view class="titleWord">好奇探索(6-12月)</view>
+		<view class="rightLine"></view>
+		<p class="explain">启蒙宝宝早期智慧</p>
+	</view>
+  <view class="content clearfix">
+		<ul>
+      <block wx:for="{{zuozheGoods}}" wx:key="goodsId"  wx:for-item="item">
+        <block wx:if="{{item.goodsId != null && index < 8}}">
+         <navigator url='/pages/proDetail/proDetail?goodsId={{item.goodsId}}'>
+         <li style='width: 40%;padding: 8px 5%;float: left;'>
+            <view class="proItem">
+              <view class="proImgWrap">
+                <block wx:for="{{item.images}}" wx:key="id" wx:for-item="image" wx:for-index="image_index">
+                  <block wx:if="{{image_index==0}}">
+                    <image class='proImg' src='http://img1.72toy.com/mpb_mtbox{{image.urlPrefix}}_x.jpg'/>
+                  </block>
+                </block>
+                <block wx:if="{{item.product.brand.logoImageUrlPrefix != null}}">
+                  <image class='proLogo' src='http://img1.72toy.com/mpb_mtbox{{item.product.brand.logoImageUrlPrefix}}_100x100.png'/>
+                </block>
+							</view>
+              <view class="proItemInfo">
+							   		<p class="proName">{{item.title}}</p>
+								   	<p class="proPrice">
+						    			<view>
+                        
+                          <image wx:for="{{item.product.rentSize}}" wx:key="item" src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png' class='starImg' />
+                        
+                        <view class="fn-right red" style="margin-right: 12px;">{{item.product.forAgeDescription}}</view>
+									   	</view>
+								   	</p>
+						   </view>
+            </view>
+         </li>
+         </navigator>
+        </block>
+      </block>
+    </ul>
+  </view>
+</view>
+
+
+<view class="newShelves">
+	<view class="title">
+		<view class="leftLine"></view>
+		<view class="titleWord">想象创造(12-18月)</view>
+		<view class="rightLine"></view>
+		<p class="explain">培养宝宝早期个性</p>
+	</view>
+  <view class="content clearfix">
+		<ul>
+      <block wx:for="{{zouzheGoods}}" wx:key="goodsId"  wx:for-item="item">
+        <block wx:if="{{item.goodsId != null && index < 8}}">
+         <navigator url='/pages/proDetail/proDetail?goodsId={{item.goodsId}}'>
+         <li style='width: 40%;padding: 8px 5%;float: left;'>
+            <view class="proItem">
+              <view class="proImgWrap">
+                 <block wx:for="{{item.images}}" wx:key="id" wx:for-item="image" wx:for-index="image_index">
+                  <block wx:if="{{image_index==0}}">
+                    <image class='proImg' src='http://img1.72toy.com/mpb_mtbox{{image.urlPrefix}}_x.jpg'/>
+                  </block>
+                </block>
+               <block wx:if="{{item.product.brand.logoImageUrlPrefix != null}}">
+                  <image class='proLogo' src='http://img1.72toy.com/mpb_mtbox{{item.product.brand.logoImageUrlPrefix}}_100x100.png'/>
+                </block>
+							</view>
+              <view class="proItemInfo">
+							   		<p class="proName">{{item.title}}</p>
+								   	<p class="proPrice">
+						    			<view>
+                      
+                          <image wx:for="{{item.product.rentSize}}" wx:key="item" src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png' class='starImg' />
+                        
+                        <view class="fn-right red" style="margin-right: 12px;">{{item.product.forAgeDescription}}</view>
+									   	</view>
+								   	</p>
+						   </view>
+            </view>
+         </li>
+         </navigator>
+        </block>
+      </block>
+    </ul>
+  </view>
+</view>
+
+
+<view class="newShelves">
+	<view class="title">
+		<view class="leftLine"></view>
+		<view class="titleWord">缤纷世界(18-36月)</view>
+		<view class="rightLine"></view>
+		<p class="explain">锻炼宝宝全面发展</p>
+	</view>
+  <view class="content clearfix">
+		<ul>
+      <block wx:for="{{paozheGoods}}" wx:key="goodsId"  wx:for-item="item">
+        <block wx:if="{{item.goodsId != null && index < 8}}">
+         <navigator url='/pages/proDetail/proDetail?goodsId={{item.goodsId}}'>
+         <li style='width: 40%;padding: 8px 5%;float: left;'>
+            <view class="proItem">
+              <view class="proImgWrap">
+                 <block wx:for="{{item.images}}" wx:key="id" wx:for-item="image" wx:for-index="image_index">
+                  <block wx:if="{{image_index==0}}">
+                    <image class='proImg' src='http://img1.72toy.com/mpb_mtbox{{image.urlPrefix}}_x.jpg'/>
+                  </block>
+                </block>
+                <block wx:if="{{item.product.brand.logoImageUrlPrefix != null}}">
+                  <image class='proLogo' src='http://img1.72toy.com/mpb_mtbox{{item.product.brand.logoImageUrlPrefix}}_100x100.png'/>
+                </block>
+							</view>
+              <view class="proItemInfo">
+							   		<p class="proName">{{item.title}}</p>
+								   	<p class="proPrice">
+						    			<view>
+                        
+                          <image wx:for="{{item.product.rentSize}}" wx:key="item" src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png' class='starImg' />
+                       
+                        <view class="fn-right red" style="margin-right: 12px;">{{item.product.forAgeDescription}}</view>
+									   	</view>
+								   	</p>
+						   </view>
+            </view>
+         </li>
+         </navigator>
+      </block>
+      </block>
+    </ul>
+  </view>
+</view>
+
+
+<view class="newShelves">
+	<view class="title">
+		<view class="leftLine"></view>
+		<view class="titleWord">尽情玩耍 (3-6岁)</view>
+		<view class="rightLine"></view>
+		<p class="explain">激发宝宝动手潜能</p>
+	</view>
+  <view class="content clearfix">
+		<ul>
+      <block wx:for="{{quanmianGoods}}" wx:key="goodsId"  wx:for-item="item">
+        <block wx:if="{{item.goodsId != null && index < 8}}">
+         <navigator url='/pages/proDetail/proDetail?goodsId={{item.goodsId}}'>
+         <li style='width: 40%;padding: 8px 5%;float: left;'>
+            <view class="proItem">
+              <view class="proImgWrap">
+                 <block wx:for="{{item.images}}" wx:key="id" wx:for-item="image" wx:for-index="image_index">
+                  <block wx:if="{{image_index==0}}">
+                    <image class='proImg' src='http://img1.72toy.com/mpb_mtbox{{image.urlPrefix}}_x.jpg'/>
+                  </block>
+                </block>
+                <block wx:if="{{item.product.brand.logoImageUrlPrefix != null}}">
+                  <image class='proLogo' src='http://img1.72toy.com/mpb_mtbox{{item.product.brand.logoImageUrlPrefix}}_100x100.png'/>
+                </block>
+							</view>
+              <view class="proItemInfo">
+							   		<p class="proName">{{item.title}}</p>
+								   	<p class="proPrice">
+						    			<view>
+                        
+                          <image wx:for="{{item.product.rentSize}}" wx:key="item" src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png' class='starImg' />
+                        
+                        <view class="fn-right red" style="margin-right: 12px;">{{item.product.forAgeDescription}}</view>
+									   	</view>
+								   	</p>
+						   </view>
+            </view>
+         </li>
+         </navigator>
+        </block>
+      </block>
+    </ul>
+  </view>
+</view>
+
+
+<!--热门品牌-->
+<view class="hotBrand">
+	<view class="title">
+		<span class="leftLine"></span>
+		<span class="titleWord">热门品牌</span>
+		<span class="rightLine"></span>
+		<p class="explain">品牌品质 正品保证</p>
+	</view>
+	<view class="hotBrandCon">
+    <ul class="hotBrand-ul">
+      <li data-brands="20100519" data-brandname="乐高" bindtap="goList"><image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/lego.jpg'/></li>
+      <li data-brands="20100520" data-brandname="小泰克" bindtap="goList"><image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/little.jpg'/></li>
+      <li data-brands="20103856" data-brandname="bright starts" bindtap="goList"><image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/bright-starts.jpg'/></li>
+      <li data-brands="20100515" data-brandname="乐高" bindtap="goList"><image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/fisher.jpg'/></li>
+      <li data-brands="20103055" data-brandname="可来赛" bindtap="goList"><image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/classic.jpg'/></li>
+      <li data-brands="20100516"  data-brandname="Hape" bindtap="goList"><image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/hape.jpg'/></li>
+      <li data-brands="20102185" data-brandname="贝乐高" bindtap="goList"><image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/paly.jpg'/></li>
+      <li data-brands="20103849" data-brandname="高思维" bindtap="goList"><image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/grow-up.jpg'/></li>
+      <li data-brands="20101887" data-brandname="伟易达" bindtap="goList"><image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/vtech.jpg'/></li>
+      <li data-brands="20101610" data-brandname="B Toys" bindtap="goList"><image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/b.jpg'/></li>
+      <li data-brands="20103888" data-brandname="麦格弗" bindtap="goList"><image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/magformers.jpg'/></li>
+      <li data-brands="20103861" data-brandname="其它" bindtap="goList"><image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/step-2.jpg'/></li>
+      <li data-brands="20103858" data-brandname="面包超人" bindtap="goList"><image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/mbcr.jpg'/></li>
+      <li data-brands="20103857"  data-brandname="托马斯和朋友" bindtap="goList"><image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/index/tms.jpg'/></li>
+    </ul>
+	</view>
+</view>

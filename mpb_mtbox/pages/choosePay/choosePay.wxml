@@ -1,0 +1,205 @@
+<!--pages/choosePay/choosePay.wxml-->
+<view class="{{mask == true ? '':'over'}}">
+  <view class="bf plr">
+    <view class='oz b-bot ptb'>
+      <view class='cr fr f16'>￥199.0元</view>
+      <view class='f16 c0'>享玩VIP标准会员月会员</view>
+    </view>
+    <view class='mb list_1 ptb'>
+      <view class='oz'>
+        <view class='fl tc'><view class='in-bk dian-green'></view></view>
+        <view class='fr'>服务范围<view class='f16 c0 in'>目前支持上海市浦东新区中环以内全部地区及外环以内大部分地区</view></view>
+      </view>
+      <view class='oz'>
+        <view class='fl tc'><view class='in-bk dian-green'></view></view>
+        <view class='fr'>可同时玩总计3 <image class="smallStar" src="http://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/icon_sstar.png" /> 的玩具</view>
+      </view>
+      <view class='oz'>
+        <view class='fl tc'><view class='in-bk dian-green'></view></view>
+        <view class='fr'>有效期内<view class='f16 c0 in'>不限</view>更换次数</view>
+      </view>
+      <view class='oz'>
+        <view class='fl tc'><view class='in-bk dian-green'></view></view>
+        <view class='fr'>赠<view class='f16 c0 in'>1张</view>免运费券</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='bf mb plr '>
+    <view class='ptb'>
+      新会员的服务期将<view class='c0 in'>从玩具第一次配送到家</view>开始生效
+    </view>
+  </view>
+
+  <view class='bf mb plr quan_c'>
+    <view class='ptb'>
+      <view class='oz b-bot' bindtap='showCoupon'>
+        <view class='oz fl'>
+          <view class='f16 c0 left'>优惠券</view>
+          <view class=''>(1张可用）</view>
+        </view>
+        <view class='cr fr quan-youhui'>-¥50.0 <view class='in-bk jiantou'></view></view>
+      </view>
+      <view class='oz b-bot'>
+        <view class='oz fl'>
+          <view class='f16 c0 left'>配送券</view>
+          <view>（含1张免费配送券） </view>
+        </view>
+        <view class='cr fr'>购买后发放</view>
+      </view>
+      <view class='oz'>
+        <view class='f16 c0 fl'>优惠券</view>
+        <view class='cr fr'>购买后发放</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='bf mb plr info_c'>
+    <view class='ptb'>
+      <view class='oz b-bottom'>
+        <view class='f16 c0 fl'>联系人</view>
+        <view class='fr oz'>
+          <view class='f16 c0 right oz'>
+            <view class='cont_left'>先生 <input class="radio active" type='radio' /></view>
+            <view class='cont_right'>女士 <input class="radio" type='radio' /></view></view>
+          <input class='input-com' type='text' placeholder='姓名' />
+        </view>
+      </view>
+      <view class='oz b-bottom'>
+          <view class='f16 c0 fl'>电话</view>
+          <view class='fr'><input type='text' placeholder='收货人电话' /></view>
+      </view>
+      <view class='oz b-bottom'>
+          <view class='f16 c0 fl'>地址</view>
+          <view class='fr'><input type='text' placeholder='小区/写字楼/学校' /></view>
+      </view>
+      <view class='oz b-bottom'>
+          <view class='f16 c0 fl'></view>
+          <view class='fr'><input type='text' placeholder='详细地址' /></view>
+      </view>
+      <view class='cr'>暂不支持更改配送地址，收送玩具须在同一地址</view>
+    </view>
+  </view>
+
+  <view class='bf mb plr pay-mode'>
+    <view class='ptb'>
+      <view class='f16 c0 b-bottom ptb mb'>支付方式</view>
+      <view class='f16 c0 oz pay-line'>
+        <view class='fr'></view>
+        <image class='weixin-pay fl' src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/purchase/weChat.png' />微信支付
+      </view>
+    </view>
+  </view>
+
+  <!-- 提交订单start  -->
+    <view class="footFixed">
+      <view class="footer memfooter">
+        <view class="placeOrder ">
+          <view class="left payables f16">合计：<view class='cr' style='display:inline'>¥1999</view></view>
+          <navigator url='/pages/choosePay/choosePay' class="right placeOrderBtn" >提交订单</navigator>
+        </view>
+      </view>   
+    </view>
+  <!-- 提交订单end  -->
+
+  <!-- 提交订单start  -->
+  <view class="mask {{mask == true ? 'hide' : ''}}"></view>
+  <view class="couponWrap {{mask == true ? 'hide' : ''}}" >
+    <view class="cCloseBtn" bindtap='hideCoupon'>×</view>
+    <view class='noUse'>
+      <view class=" oz">
+        <view class="cpItem oz" bindtap='clickCoupon'>
+          <view class="left">
+            <view>【普通会员月套餐50元优惠券】优惠券</view>
+            <view class="useTerm">使用期限 ：2018.01.30 - 2018.03.01</view>
+          </view>
+          <view class="right">
+            <view>抵用券</view>
+            <view class="money f16">¥50.0</view>
+          </view>
+        </view>
+        <view class="cpItem oz">
+          <view class="left">
+            <view>【普通会员月套餐50元优惠券】优惠券</view>
+            <view class="useTerm">使用期限 ：2018.01.30 - 2018.03.01</view>
+          </view>
+          <view class="right">
+            <view>抵用券</view>
+            <view class="money f16">¥50.0</view>
+          </view>
+        </view>
+        <view class="cpItem oz">
+          <view class="left">
+            <view>【普通会员月套餐50元优惠券】优惠券</view>
+            <view class="useTerm">使用期限 ：2018.01.30 - 2018.03.01</view>
+          </view>
+          <view class="right">
+            <view>抵用券</view>
+            <view class="money f16">¥50.0</view>
+          </view>
+        </view>
+        <view class="cpItem oz">
+          <view class="left">
+            <view>【普通会员月套餐50元优惠券】优惠券</view>
+            <view class="useTerm">使用期限 ：2018.01.30 - 2018.03.01</view>
+          </view>
+          <view class="right">
+            <view>抵用券</view>
+            <view class="money f16">¥50.0</view>
+          </view>
+        </view>
+        <view class="cpItem oz">
+          <view class="left">
+            <view>【普通会员月套餐50元优惠券】优惠券</view>
+            <view class="useTerm">使用期限 ：2018.01.30 - 2018.03.01</view>
+          </view>
+          <view class="right">
+            <view>抵用券</view>
+            <view class="money f16">¥50.0</view>
+          </view>
+        </view>
+        <view class="cpItem oz">
+          <view class="left">
+            <view>【普通会员月套餐50元优惠券】优惠券</view>
+            <view class="useTerm">使用期限 ：2018.01.30 - 2018.03.01</view>
+          </view>
+          <view class="right">
+            <view>抵用券</view>
+            <view class="money f16" bindtap="mytap">¥50.0</view>
+          </view>
+        </view>
+        <view class="cpItem oz">
+          <view class="left">
+            <view>【普通会员月套餐50元优惠券】优惠券</view>
+            <view class="useTerm">使用期限 ：2018.01.30 - 2018.03.01</view>
+          </view>
+          <view class="right">
+            <view>抵用券</view>
+            <view class="money f16">¥50.0</view>
+          </view>
+        </view>
+        <view class="cpItem oz">
+          <view class="left">
+            <view>【普通会员月套餐50元优惠券】优惠券</view>
+            <view class="useTerm">使用期限 ：2018.01.30 - 2018.03.01</view>
+          </view>
+          <view class="right">
+            <view>抵用券</view>
+            <view class="money f16">¥50.0</view>
+          </view>
+        </view>
+        <view class="cpItem oz">
+          <view class="left">
+            <view>【普通会员月套餐50元优惠券】优惠券</view>
+            <view class="useTerm">使用期限 ：2018.01.30 - 2018.03.01</view>
+          </view>
+          <view class="right">
+            <view>抵用券</view>
+            <view class="money f16">¥50.0</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 提交订单end  -->
+</view>

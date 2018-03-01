@@ -1,0 +1,46 @@
+/* pages/step2/step2.wxss */
+.oz{overflow: hidden;zoom: 1;}
+.fl{float: left;}
+.fr{float: right;}
+page{font-size: 12px;background: #efefef;line-height: 24px;}
+.header{padding: 10px;}
+.step view{display: inline-block;	width: 30%;height: 40px;background-color: #FFFFFF;font-size: 16px;color: #8d8d8d;text-align: center;line-height: 40px;border:1px solid #fff;border-top: 4px solid #8d8d8d;border-radius: 5px;margin-right: 3%;}
+
+.step view.current{border:1px solid #5dae98;border-top: 4px solid #5dae98;}
+.step view.currented{border:1px solid #fff;border-top: 4px solid #5dae98;}
+.step view:last-child{margin: 0;}
+
+.header .step_tip{	font-size: 16px;	text-align:center;	color: #5dae98;	position: relative;	margin-top: 5px;}
+.header .step_tip view{	height: 30px;	padding-top: 15px;}
+.header .step_tip view.step1{	background:url(https://www.72toy.com/mpb_mtbox/v/v3/share/images/step/border-left.png) no-repeat  left center;	background-size: 100%  100%;display: none;}
+.header .step_tip view.step2{	background:url(https://www.72toy.com/mpb_mtbox/v/v3/share/images/step/border-center.png) no-repeat  left center;	background-size: 100%  100%;}
+.header .step_tip view.step3{	background:url(https://www.72toy.com/mpb_mtbox/v/v3/share/images/step/border-right.png) no-repeat  left center;	background-size: 100%  100%;  display: none;}
+
+.header .step_tip .tipClose{	width: 15px;	height: 15px;	position: absolute;	top: 0;	right: 0;}
+
+.proItem{	padding: 10px;background-color: #FFFFFF;overflow:hidden;	margin-bottom: 10px;}
+
+.proRelet{padding: 10px 0;background: #fff;}
+
+.myCollect{padding: 0 10px;background-color: #FFFFFF;margin-top: 10px;}
+.wordWrap{height: 40px;	width:100%;line-height: 40px;font-size: 16px;}
+
+.collectListWrap{border-top: 2px solid #EEEEEE;padding: 8px 0;max-height:300px;overflow-y:auto;}
+
+.li_oz{float: left;width:50%;margin: 8px 0;}
+.li_oz .fl{width:50%;box-sizing: border-box;border:1px solid #ddd;text-align: center}
+.li_oz .fl image{width:4rem;height:4rem;}
+
+.li_oz .fr{width:50%;line-height: 20px;padding: 0 10px 0 5px;box-sizing: border-box;}
+.li_oz .fr .fr-p{height: 40px;overflow: hidden;}
+.li_oz .fr .star-img image{margin-right: 5px;width: 10px; height: 10px;border: 1px solid #EEEEEE;}
+
+.li_oz .fr .rentBtn{display: inline-block;width: 80%;	height: 18px;	background-color: #5dae98;	color: white;	text-align: center;vertical-align: middle;line-height: 18px;border-radius: 3px;}
+.li_oz .fr .rentBtn.disabled{background: #dbdbdb;}
+.li_oz .fr .rentBtn2{display: inline-block;	width: 80%;	height: 18px;	background: #dbdbdb;	color: white;text-align: center;vertical-align: middle; line-height: 18px; border-radius: 3px;}
+
+.footer-g{position: fixed;width:100%;left: 0;bottom: 0;}
+.btn-wrap{margin-bottom: 10px;}
+
+.whiteBgBtnWrap {background: #fff;height: 45px;line-height: 45px;}
+.button { border: none; background-color: #e74f5c; color: white; width: 50%; text-align: center;float: right;font-size: 14px;}

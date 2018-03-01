@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/proList/proList",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/commonMember/commonMember",
+    "pages/seniorMember/seniorMember",
+    "pages/monthMemProtocol/monthMemProtocol",
+    "pages/proDetail/proDetail",
+    "pages/memberCenter/memberCenter",
+    "pages/register/register",
+    "pages/coupon/coupon",
+    "pages/wish/wish",
+    "pages/leaseProtocol/leaseProtocol",
+    "pages/choosePay/choosePay",
+    "pages/step2/step2",
+    "pages/question/question",
+    "pages/selPlan/selPlan"
+  ],
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#5dae98",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      
+      {
+        "pagePath": "pages/proList/proList",
+        "text": "玩具库",
+        "iconPath": "img/icon/bear.png",
+        "selectedIconPath": "img/icon/bear_s.png"
+      },
+      {
+        "pagePath": "pages/wish/wish",
+        "text": "心愿单",
+        "iconPath": "img/icon/heart.png",
+        "selectedIconPath": "img/icon/heart_s.png"
+      },
+      {
+        "pagePath": "pages/memberCenter/memberCenter",
+        "text": "我的",
+        "iconPath": "img/icon/face.png",
+        "selectedIconPath": "img/icon/face_s.png"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "首页",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  }
+}

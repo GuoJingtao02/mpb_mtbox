@@ -1,0 +1,42 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+page{
+  font-size: 12px;
+}
+.h2{
+  font-weight: bold;
+}
+p,ul,li{
+  display: block;
+}
+
+.red{color: red !important}
+.green{color: green !important}
+.gray{color: gray !important}
+
+.fn-left{float: left;}
+.fn-right{float: right;}
+/* 清浮动clear */
+.clear { clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0;}
+.clearfix:before, .clearfix:after { content: '.'; display: block; overflow: hidden; visibility: hidden; font-size: 0; line-height: 0; width: 0; height: 0;}
+.clearfix:after{ clear: both;}
+.clearfix{ zoom: 1;}
+
+.hide{display: none;}
+
+.starImg{
+	width: 11.96px;
+	height: 11.96px;
+  padding-left: 1px;
+}
+
+.btn-wrap{text-align: center;}
+.btn{display: inline-block;width: 90%;height: 41.6px;line-height:41.6px;text-align:center;border-radius:4px;background:#5DAE98;color:#fff;font-size: 15.6px;}

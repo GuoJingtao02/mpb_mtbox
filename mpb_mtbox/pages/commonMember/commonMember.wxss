@@ -1,0 +1,51 @@
+/* pages/commonMember/commonMember.wxss */
+.memTil{color: white;height: 93.6px;text-align: center;}
+.commonMem{background: url(http://www.72toy.com/mpb_mtbox/v/v3/share/images/purchase/commem_bg.jpg)  no-repeat left center;background-size: 100%;height: 93.6px;}
+.memTil .smallStar{width: 6.76px;height: 6.76px;vertical-align: top;}
+.memTil .p_vip{font-size: 18.72px;padding:20.8px 0 7.8px 0 }
+.memTil .p_vip image{width: 13px;height: 13.52px;vertical-align: top; padding-top: 6.24px;}
+
+.memClassify{padding: 7.8px 10.4px 15.6px 10.4px;}
+.memClassify .card{font-size: 15.6px;}
+.memClassify .cardPrice{font-size: 24.96px;color: #E74F5C;}
+.memClassify .cardPrice span{font-size: 9.36px;}
+.memClassify .cardType{position: relative;}
+.memClassify .cardType img{width: 53.04px;height: 53.04px;position: absolute;top: 0;right: 0;}
+.memClassify .avg_price,.memClassify .free_door{font-size:12px;}
+.memClassify .avg_price{color: #e74f5c;margin:-5.2px 0 1.56px 0;}
+.memClassify .free_door{color:#5DAE98}
+.memClassify .commonCurrent{background-color: #5DAE98;}
+.memClassify .commonCurrent p{color: white;}
+.memClassify .monthCard{float:left;width:48%;margin:3px 1%;height:90px;border: 1px solid #5DAE98;box-sizing: border-box;border-radius: 5.2px;}
+.memClassify .monthCard p{text-align: center;}
+.memClassify .yearCard,.seasonCard{position: relative;}
+.memClassify .yearCard img,.seasonCard img{width: 53.04px;height: 53.04px;z-index: 9;position:absolute;top: -1px;right: -1px;}
+
+.memBenefit{background-color: #FFFFFF;}
+.memBenefitTil,.useIllustrateTil{margin:0 20.8px;height: 49.4px;line-height: 49.4px;}
+.memBenefitTil .tilWord,.useIllustrateTil .tilWord{display:inline-block;width:20%;text-align: center;}
+.memBenefitTil .lineThrough,.useIllustrateTil .lineThrough{width: 40%;height: 0;border-top: 1px solid #1A1A1A;margin-top:24.96px;}
+.memBenefitCon{padding: 0 20.8px;}
+.memBenefitCon ul li{float: left;width: 31%;height:104px;text-align: center;font-size: 10.4px;color: #8D8D8D;margin: 5px 1%;}
+.memBenefitCon .leaseNum image{width: 33.28px;height: 37.44px;padding-bottom: 14.04px;}
+.memBenefitCon .starLevel image,.unlimitNum image{width: 41.08px;height:41.08px;padding-bottom: 10.4px;}
+.starLevel .li-second{position: relative;}
+.memBenefitCon .starLevel .sstar{width: 6.76px;height: 6.76px;position: absolute;right: 10%;top: 3px;}
+.memBenefitCon .leaseValue image{width: 33.28px;height: 44.2px;padding-bottom: 7.28px;}
+.memBenefitCon .freight image{width: 43.16px;height: 34.84px;padding-bottom: 16.64px;}
+.memBenefitCon li p{line-height: 20px;}
+
+.useIllustrate{background-color: #FFFFFF;padding-bottom: 37.44px;}
+.useIllustrateCon{background-color: #FFFFFF;padding: 0 3.64px 0 13px;}
+.useIllustrateCon ul li{list-style-type: disc;color: #5DAE98;padding-bottom: 13px;}
+.useIllustrateCon ul li view{color: #1A1A1A;}
+.useIllustrateCon ul li view navigator{display: inline-block}
+.placeOrder{line-height: 46.8px;padding-left: 10.4px;}
+.placeOrder .payables span{color: #E74F5C;}
+.placeOrder .placeOrderBtn{height: 46.8px;width: 89.44px;background-color: #E74F5C;color: white;text-align: center;vertical-align: middle;border:none;line-height:46px;font-size: 14px;} 
+.sstar_img{width: 6.76px;height: 6.76px}
+.li_disc{display: inline-block;border-radius: 100%;width: 5px;height: 5px;background:#5DAE98;margin-right:8px;
+ }
+ .footFixed{height: 78px;}
+.footer{position: fixed; width: 100%; height:46.8px;min-width: 320px; max-width: 720px; bottom: 0;  background-color:#FFFFFF; text-align: right; border-top:1px solid #EEEEEE;z-index: 10;}
+

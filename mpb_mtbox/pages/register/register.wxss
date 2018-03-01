@@ -1,0 +1,116 @@
+.regBanner image{width: 100%;height: 183px;}
+.user_form{
+   padding: 10.4px;
+   position: relative;
+   font-size: 15.6px;
+}
+.user_phone_field,.user_pwd_field,.user_yzm,.user_invite{
+ border-bottom: 2px solid #eee;
+}
+.user_form input{
+  width: 100%;
+  border: none;
+  height: 45.76px;
+}
+.user_form button:focus{
+ outline: none;
+}
+.user_phone_field{
+  padding-top: 19.24px;
+  position: relative;
+  width:100%;
+  padding-right:150px;
+  box-sizing:border-box;
+}
+.user_phone_field>.get_yzm{
+   position:absolute;
+  right:10.4px;
+  bottom:10px;
+  border-radius:50px;
+  color:#5dae98;
+  background-color:#fff;
+  height:22px;
+  font-size:14px;
+  border:1px solid #5dae98;
+  line-height:22px;
+  vertical-align:middle;
+  text-align:center;
+  padding:0 5px;
+}
+.user_pwd_field{
+  position: relative;
+}
+.user_pwd_field>.eye image{
+   position: absolute;
+   top: 0;
+   right: 36.4px;
+   bottom: 0;
+   margin: auto;
+   width: 20.8px;
+   height: 13.52px;
+}
+.user_pwd_field>.clear_pwd image{
+   position: absolute;
+   top: 0;
+   right: 10.4px;
+   bottom: 0;
+   margin: auto;
+   width: 16.64px;
+   height: 16.64px;
+   opacity: 0.5;
+}
+.user_protocol{
+ height: 46.8px;
+ line-height: 46.8px;
+}
+.user_protocol image{
+	width:15.08px;
+  height:15.08px;
+}
+.user_protocol .span{
+ display: inline-block;
+ font-size: 12.48px;
+ color:#1a1a1a ;
+ padding-right: 5.2px;
+ padding-left:5px;
+}
+.user_protocol navigator{
+ display: inline-block;
+ font-size: 11.44px;
+ text-decoration: underline;
+ color: #1a1a1a;
+}
+.user_commit{position: relative;}
+.user_commit>.commit{
+    width: 100%;
+    height: 36.4px;
+    background-color: #5dae98;
+    color: white;
+    font-size: 18.72px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    line-height:36.4px;
+}
+.user_commit>.tipWrap{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  text-align:center;
+}
+.user_commit>.tipWrap  .span{
+  display: inline-block;
+  height: 37.44px;
+  color: white;
+  background-color: #000000;
+  opacity: 36.4px;
+  border-radius: 5px;
+  line-height: 37.44px;
+  padding: 0 20.8px;
+  font-size: 14.56px;
+}
+.registerTip{padding:10.4px 0;text-align: right;}
+.registerTip a{font-size:12.48px;color: #8D8D8D;}

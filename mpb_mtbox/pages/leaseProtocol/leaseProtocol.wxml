@@ -1,0 +1,151 @@
+<!--pages/leaseProtocol/leaseProtocol.wxml-->
+<view class="protocolWrap" >
+  <view class="protocolTIt tc">“享玩”租赁协议</view>
+  <view class="protocolCon">
+    <view class="bt">本协议是您与上海提趣网络科技有限公司（下称“提趣网络科技”）之间关于使用提趣网络科技提供的“享玩”玩具进行玩具租赁业务所订立的协议。本协议描述享玩用户租赁玩具所享有的权利和应尽的义务。“用户”或“您”是指进行“享玩”玩具租赁业务的个人或单一实体。本服务协议构成您（无论个人或者单位）使用“享玩”玩具租赁业务的先决条件，除非您接受本协议条款，否则您无权使用本协议的相关服务。您的使用行为将视为同意接受本协议各项条款的约束。 享玩有权随时对服务条款进行修改，一旦服务条款发生变更和修改，享玩将在相关页面上提示修改的内容；如果您不同意本协议的修改，可以取消已经获取的服务并停止使用；如果您继续使用享玩提供的服务，则视为您已经接受本协议的全部修改。</view>
+    <view class="bt">请您审阅并接受或不接受本协议，未成年人应在法定监护人陪同下审阅和履行，未成年人行使和履行本协议项下的权利和义务视为已获得了法定监护人的认可，您在享受享玩用户服务时必须完全、严格遵守本服务协议条款。</view>
+    <view class="ptlDl">
+			<view class='b ptb'>一、租赁业务概述</view>
+			<view>
+					<view>
+						<view class="bt">1、本业务的具体内容由提趣网络科技根据实际情况提供，包括但不限于授权您通过其账号浏览商品、购买会员、租赁商品、续租、取消租赁、退货、付款、退款、联系客服、提供反馈。提趣网络科技可以对其提供的服务予以变更，且提趣网络科技提供的服务内容可能随时变更；您将会收到提趣网络科技关于服务变更的通知。</view>
+						<view class="bt">2、您可以按玩具所标识的日租价按天租赁，也可以通过购买成为按月服务会员免租金租赁所有玩具。</view>
+						<view class="bt">3、按月服务会员租赁的玩具，不设玩具租赁期，用户可根据实际情况，进行玩具更换，需自付上门费用（详见 二.1.3）。按月服务会员到期且不再续费时，享玩将上门回收租赁的玩具。</view>
+						<view class="bt">4、在您下单后，请保持手机畅通，享玩客服会与您取得联系，双方确认具体的收货地址与时间，享玩将尽力按时把玩具配送给您，每笔订单租赁期的起始日期为您在指定地址收到玩具的日期。如果由于享玩不可预测的原因，造成玩具未能按照约定日期准时送达，租期起始日将以实际送达日为准。</view>
+						<view class="bt">5、在需求高峰日，会有大量订单，请您注意提前下单。如果订单过多，我们将按照您下单时间顺序安排配送，排序靠后的您可能无法在约定时间收货。如果当天不能按时送货的，则顺延至下一个工作日送货，客服会提前和您联系，协商新的配送时间。</view>
+						<view class="bt">6、如果按月服务会员到期后，未能及时归还玩具，则将按日收取租金，具体收费规则：从到期日后第一天的00:00开始计算，24小时记为一天，不满24小时的按照24小时计算；按照未能及时归还玩具平均到日的费用，进行计费。</view>
+					</view>
+				</view>
+				<view class='b ptb'>二、您的权利和义务</view>
+				<view>
+					<view>
+						<view>1、您的权利
+							<view class="bt">您可以按玩具所标识的日租价，按天租赁所有玩具，租赁玩具时需要支付押金，每次上门取送玩具需要收取运费；成为“享玩”会员后，您可以免租金租赁所有玩具。</view>
+							<view class="bt">根据所选会员服务等级和每次所选玩具星级的不同，用户可同时玩一定件数的玩具，比如购买“标准会员服务”的用户可同时玩1-2件玩具，而购买“高阶会员服务”的用户可同时玩2-4件玩具。这里的件数是指您可以同时拥有的玩具数量。</view>
+							<view class="bt">“享玩”会员用户可以不限次数的更换玩具，无需额外支付租金。每次租赁仅需根据配送地址支付一定运费。提趣网络科技有权根据运营成本对运费进行调整。</view>
+						</view>
+            <view>2、您的义务</view>
+            <view class="bt">请您妥善保管玩具，如果您租赁玩具期间造成玩具损坏、丢失，您有义务对享玩进行赔偿，如果您拒绝赔偿，享玩有权追究您的法律责任；</view>
+            <view class="bt">玩具损毁或者丢失的赔偿细则如下：</view>
+            <view class="ptlTable">
+              <view class="b_bottom b tc">玩具损坏或丢失赔偿细则</view>
+              <view class="b b_bottom oz">
+                <view class="b_right tc w-50 left box-b">损坏情况</view>
+                <view class="tc w-50 left box-b">用户赔偿</view>
+              </view>
+              <view class="b_bottom oz">
+                <view class="b_right  w-50 left box-b">正常磨损以及轻微磕碰，完全不影响使用</view>
+                <view class="w-50 left box-b">无需赔偿</view>
+              </view>
+              <view class="b_bottom oz">
+               <view class="b_right  w-50 left box-b">严重磨损，污渍严重无法清除，玩具表面裂痕凹痕无法修复</view>
+                <view class="w-50 left box-b">按照享玩平台显示市场价格的30%赔偿</view>
+              </view>
+              <view class="b_bottom oz">
+                <view class="b_right  w-50 left box-b">重要功能损坏，无法再进行出租</view>
+                <view class="w-50 left box-b">按照享玩平台显示市场价格的70%赔偿</view>
+              </view>
+              <view class="b_bottom oz">
+                <view class="b_right  w-50 left box-b">关键零配件丢失，无法购买补充</view>
+                <view class="w-50 left box-b">按照享玩平台显示市场价格的50%赔偿</view>
+              </view>
+              <view class="b_bottom oz">
+                <view class="b_right  w-50 left box-b">零配件丢失</view>
+                <view class="w-50 left box-b">按照单个配件单价赔偿</view>
+              </view>
+            </view>
+          </view>
+              
+          <view class="tableTit">零配件价目:</view>
+          <view class="ptlTable">
+            <view class="b_bottom b tc">零配件价目</view>
+            <view class="b_bottom oz">
+              <view class="b_right tc w-33 left box-b b">玩具类型</view>
+              <view class="b_right tc w-33 left box-b b">配件类型</view>
+              <view class="tc w-33 left box-b b">价格/件</view>
+            </view>
+            <view class="b_bottom oz">
+              <view class="b_right w-33 left box-b tc">厨房</view>
+              <view class="b_right w-33 left box-b">刀叉、锅、食材</view>
+              <view class="w-33 left box-b tc">10元/件</view>
+            </view>
+            <view class="b_bottom oz">
+              <view class="b_right w-33 left box-b tc">>积木拼插类</view>
+              <view class="b_right w-33 left box-b">异形件、特殊块</view>
+              <view class="w-33 left box-b tc">20元/件</view>
+            </view>
+            <view class="b_bottom oz">
+              <view class="b_right w-33 left box-b tc">积木拼插类</view>
+              <view class="b_right w-33 left box-b">普通件</view>
+              <view class="w-33 left box-b tc">5元/件</view>
+            </view>
+            <view class="b_bottom oz">
+              <view class="b_right w-33 left box-b tc">乐高类</view>
+              <view class="b_right w-33 left box-b">颗粒、动物、人仔</view>
+              <view class="w-33 left box-b tc">按淘宝零售价+1元（分摊运费）</view>
+            </view>
+            <view class="b_bottom oz">
+              <view class="b_right w-33 left box-b tc">益智类</view>
+              <view class="b_right w-33 left box-b">积木、动物、卡片、模型、玩耍件</view>
+              <view class="w-33 left box-b tc">15元/件</view>
+            </view>
+            <view class="b_bottom oz">
+              <view class="b_right w-33 left box-b tc">电动类</view>
+              <view class="b_right w-33 left box-b">充电器、遥控器</view>
+              <view class="w-33 left box-b tc">50元/件</view>
+            </view>
+            <view class="b_bottom oz">
+              <view class="b_right w-33 left box-b tc">轨道类</view>
+              <view class="b_right w-33 left box-b">轨道、支柱</view>
+              <view class="w-33 left box-b tc">20元/件</view>
+            </view>
+            <view class="b_bottom oz">
+              <view class="b_right w-33 left box-b tc">沙水桌</view>
+              <view class="b_right w-33 left box-b">玩偶、船、水桶</view>
+              <view class="w-33 left box-b tc">20元/件</view>
+            </view>
+            <view class="b_bottom oz">
+              <view class="b_right w-33 left box-b tc">爬行类</view>
+              <view class="b_right w-33 left box-b">垫子、管道、帐篷</view>
+              <view class="w-33 left box-b tc">市场价50%</view>
+            </view>
+            <view class="b_bottom oz">
+              <view class="b_right w-33 left box-b tc">健身架</view>
+              <view class="b_right w-33 left box-b">挂件</view>
+              <view class="w-33 left box-b tc">15元/件</view>
+            </view>
+            <view class="b_bottom oz">
+              <view class="b_right w-33 left box-b tc">球类</view>
+              <view class="b_right w-33 left box-b">篮球、足球</view>
+              <view class="w-33 left box-b tc">50元/件</view>
+            </view>
+            <view class="b_bottom oz">
+              <view class="b_right w-33 left box-b tc">特殊配件</view>
+              <view class="b_right w-33 left box-b">电子琴琴凳、琴键</view>
+              <view class="w-33 left box-b tc">100元/件</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+        
+  <view class='b ptb'>三、享玩的权利和义务</view>
+    <view>
+      <view>
+        <view>1、享玩的权利
+          <view class="bt">若您使用虚假电话、姓名、地址或冒用他人信息使用享玩服务，享玩将做出相应处罚或屏蔽地址的处理；对享玩造成经济损失的，享玩将保留追究法律责任的权利；</view>
+          <view class="bt">对于您在享玩交易服务中的不当行为或其它任何享玩认为应当终止服务的情况，享玩有权随时做出删除相关信息、终止服务提供等处理，而无须征得您的同意；</view>
+          <view class="bt">享玩有权对您的注册资料及交易行为进行查阅，发现注册资料或交易行为中存在任何问题或怀疑，均有权向您发出询问及要求改正的通知,不及时改正者享玩保留直接做出删除等处理的权利；</view>
+          <view class="bt">对于您有意或无意造成玩具损坏、丢失的，您有义务对享玩进行赔偿，对于拒绝赔偿的，享玩有权追究您法律责任；</view>
+          <view class="bt">您在使用过程中与享玩产生纠纷，可以与享玩进行予以协调。享玩如发现您有违法或违反本服务协议的行为，享玩有权随时做出删除相关信息、终止服务提供等处理，而无须征得您的同意。</view>
+        </view>
+        <view>2、享玩的义务
+          <view class="bt">享玩会对每件玩具进行全方位的消毒，享玩使用的是国际幼儿园标准消毒产品，宝宝可以放心的玩。</view>
+          <view class="bt">享玩应当及时更新发布的产品及价格，保证交易的准确性和及时性；</view>
+          <view class="bt">享玩应当最大程度做好您的服务工作，保证产品的优秀品质和及时送达；</view>
+          <view class="bt">享玩应当选择专业的消毒工具和修复服务，做好玩具的消毒、修补，确保玩具的干净整洁，不会对您的使用产生健康风险。如果在租赁期内，由于您的原因，造成玩具被污染和损坏，从而导致您及其他人受到任何伤害，享玩和提趣网络科技不承担任何责任。</view>
+        </view>
+      </view>
+    </view>
+  </view>
+

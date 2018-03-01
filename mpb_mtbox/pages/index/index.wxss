@@ -1,0 +1,52 @@
+/**index.wxss**/
+.logo-img{
+  width: 140rpx;
+  height: 60rpx;
+  position: absolute;
+  left: 20rpx;
+  top: 20rpx;
+  z-index: 999;
+}
+
+.navItem{padding: 18.2px 23.4px;}
+.navItem ul li{float: left;width: 25%;text-align: center;}
+.navItem image{width: 47.39px;height: 47.39px;}
+.navItem li a{color: #1A1A1A;}
+.navItem li p{padding-top: 5px;}
+.navItem .doorService{padding-right:0;}
+
+
+.perfectBaByInfo{background-color: #F2F2F2;position: relative;}
+.perfectBaByInfo image{width: 374.4px;height: 111.28px;}
+.perfectBaByInfo .setUpBtn{width: 98.8px;height: 28.6px;color: white;border: 2px solid white;border-radius:5px;position: absolute;top:66.04px;left: 137.8px;opacity: 0;}
+.memberWrap{padding:10.4px 10.4px 13px 10.4px;color: white;}
+.commonMember,.seniorMember{background-color:#5dae98;width: 49%;border-radius: 5.2px;text-align: center;}
+.seniorMember{background-color:#e1a73b;}
+.commonMember .h3,.seniorMember .h3{padding-top:6.72px;font-size: 12.48px;font-weight: 500;padding-bottom: 13px;}
+.commonMember .price,.seniorMember .price{background-color: #6fc4ad;height: 23.4px;line-height: 23.4px;margin-top: 7.8px;border-bottom-left-radius:5.2px;border-bottom-right-radius: 5.2px;}
+.seniorMember .price{background-color: #f1bc5b;}
+.commonMember .memBenefit,.seniorMember .memBenefit{font-size: 10.4px;}
+.commonMember .price span,.seniorMember .price span{font-size: 9.36px;}
+
+
+.newShelves,.hotToy,.hotBrand,.allToy{position: relative;border-bottom: 10.4px solid #F2F2F2;padding-bottom: 2px;}
+.title{text-align: center;padding:15.6px 0 20.8px 0;}
+.leftLine,.rightLine{border: 2px solid #5DAE98;width: 7.8px;display: inline-block;vertical-align: middle;}
+.titleWord{font-size: 15.6px;color: #5DAE98;}
+.explain{padding-top: 7.8px;color: #8D8D8D;}
+.proItem{height:223.6px;width:100%;box-sizing: border-box;-webkit-box-sizing: border-box;}
+.proItem .proName{height: 15.6px;padding-bottom: 5.2px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.proImgWrap{position: relative;}
+.proImgWrap .proImg{width: 163.8px;height: 163.8px;}
+.proImgWrap .proLogo{position: absolute;top:7.8px;left:7.8px;width: 36.4px;height: 36.4px}
+.proItem .memberFree{width: 45.24px;height: 12.48px;float: right;}
+.content .proItem:nth-child(even){border-right:none;}
+.allToy .leftLine{position: absolute;top: 24.96px;left:122.2px;} 
+.allToy .rightLine{position: absolute;top: 24.96px;left:240.76px;} 
+.allToy .title{background-color: #5DAE98;}
+.allToy .titleWord,.allToy .explain{color: white;}
+.hotBrand image{width:122.2px;height: 65px;}
+.proPrice{font-size:10.4px;color: #8d8d8d;overflow: hidden;}
+
+.hotBrand-ul{border-top: 1px #efefef solid;overflow: hidden;}
+.hotBrand-ul li{width: 33%;float: left;border-right: 1px #efefef solid;border-bottom: 1px #efefef solid; }

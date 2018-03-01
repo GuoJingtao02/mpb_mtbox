@@ -1,0 +1,85 @@
+<view class="exchangeWrap">
+      <view class='ehTxt-parent'>
+			  <input class="ehTxt" bindinput='bindKeyInput' value="{{inputText}}" type="text" bindconfirm='submitDiscount' placeholder="请输入兑换码" />
+      </view>
+      <view class='btn-parent'>
+        <button class="ehBtn" bindtap='submitDiscount' >兑换</button>
+      </view>
+</view>
+<view class="couponTab">
+  <ul class="clearfix">
+    <li class="{{typeli==1 ? 'current' : ''}}" data-type="1" bindtap="switchli">未使用</li>
+    <li class="{{typeli==2 ? 'current' : ''}}" data-type="2" bindtap="switchli">已使用</li>
+    <li class="{{typeli==3 ? 'current' : ''}}" data-type="3" bindtap="switchli">已过期</li>
+  </ul>
+</view>
+
+<view class="couponCon ">
+	
+  <view class="expired nouse {{typeli==1 ? '' : 'hide'}}">
+    <block wx:for="{{noUseList}}" wx:key="id">
+			<view class="cpItem ">
+        <view class='cp-item-child clearfix'>
+          <view class="fn-left">
+            <view class='p'>{{item.discount.descRemark }}</view>
+            <view class="useTerm p">使用期限 ：{{item.beginTime}} - {{item.endTime}}</view>
+          </view>
+          <view class="fn-right cpMoney">
+            <view class='p'>抵用券</view>
+            <view class="p money">￥{{item.discount.discountMoney/100 }}</view>
+            
+          </view>
+        </view>
+				
+			</view>
+		</block>
+	</view>
+
+  	<view class="expired {{typeli==2 ? '' : 'hide'}}">
+    <block wx:for="{{useedList}}" wx:key="id">
+			<view class="cpItem ">
+        <view class='cp-item-child clearfix'>
+          <view class="fn-left">
+            <view class='p'>{{item.discount.descRemark }}</view>
+            <view class="useTerm p">使用期限 ：{{item.beginTime}} - {{item.endTime}}</view>
+          </view>
+          <view class="fn-right cpMoney">
+            <view class='p'>抵用券</view>
+            <view class="p money">￥{{item.discount.discountMoney/100 }}</view>
+            <view class="used_icon">
+              <image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/used_icon.png'/>
+            </view>
+          </view>
+        </view>
+				
+			</view>
+		</block>
+	</view>
+
+
+
+
+
+	
+	<view class="expired {{typeli==3 ? '' : 'hide'}}">
+    <block wx:for="{{timeOutList}}" wx:key="id" wx:for-item="timeOut">
+			<view class="cpItem ">
+        <view class='cp-item-child clearfix'>
+          <view class="fn-left">
+            <view class='p'>{{timeOut.discount.descRemark }}</view>
+            <view class="useTerm p">使用期限 ：{{timeOut.beginTime}} - {{timeOut.endTime}}</view>
+          </view>
+          <view class="fn-right cpMoney">
+            <view class='p'>抵用券</view>
+            <view class="p money">￥{{timeOut.discount.discountMoney/100 }}</view>
+            <view class="used_icon">
+              <image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/used_icon.png'/>
+            </view>
+          </view>
+        </view>
+				
+			</view>
+		</block>
+	</view>
+	
+</view>

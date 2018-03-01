@@ -1,0 +1,24 @@
+page{padding-bottom: 47px;padding-top: 48px;}
+.ctCount,.completeWrap{padding: 0 10.4px; height: 36.4px; line-height: 36.4px;border-bottom: 1px solid #EEEEEE;background-color: #FFFFFF;position: fixed;left: 0;top: 0;width: 100%;box-sizing: border-box;z-index: 10;}
+.completeWrap .allChecked{background: url(https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/checkIcon.png) no-repeat 0 center;background-size: 15.08px 15.08px;padding-left: 20.8px;}
+.ctListWrap .checkedWrap{width:8%;margin-top: 52px;padding-left: 10.4px;}
+.ctListWrap .nochecked{background: url(https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/checkIcon.png)
+ no-repeat 0 center;background-size: 15.08px 15.08px;padding-left: 20.8px;}
+.checked{background: url(https://www.72toy.com/mpb_mtbox/v/v3/share/images/icon_on.png)
+ no-repeat 0 center;background-size: 15.08px 15.08px;padding-left: 20.8px;}
+.ctListItem{padding: 10.4px;border-bottom: 10.4px solid #EEEEEE;background-color: #FFFFFF;overflow: hidden;}
+.ctListItem .ctProImg{float: left;position: relative}
+.ctListItem .ctProImg .proImg{width: 250rpx;height: 250rpx;}
+.ctListItem .ctProImg .proLogo{position: absolute;top: -15px;left: 0;width: 36.4px;height: 36.4px}
+.ctListItem .ctproInfo{width:80%;padding-top: 10.4px;line-height:20px;}
+.ctListItem .ctproInfo .p{line-height: 170%;}
+.ctproInfopar{overflow: hidden}
+.ctListItem .freeImg{width: 45.24px;height: 12.48px;margin-top: -2px;}
+.ctListItem .starImg{width: 11.96px;height: 11.96px;margin-top: -3px;}
+.ctListItem .deleteIcon{width: 20%;}
+.ctListItem .deleteIcon image{width: 13px;height: 12.48px;margin-top: 54.6px;}
+.footer{position: fixed; width: 100%; height:46.8px;min-width: 320px; max-width: 720px; bottom: 0;  background-color:#FFFFFF; text-align: right; border-top:1px solid #EEEEEE;z-index: 10;}
+.deleteAll{padding-left:15.6px ;height: 46.8px ;line-height: 46.8px;overflow:hidden;}
+.deleteAll .deleteCount{text-align: left;}
+.deleteAll .deleteCount .span{color:#8D8D8D;display:inline-block;}
+.deleteAll .deleteBtn button{width:72.8px;height:46.8px;font-size:15.6px;text-align:center;border:none;color:white;background-color: #E74F5C;}

@@ -1,0 +1,166 @@
+<view class="top-fix">
+  <view class="searchBox">
+    <view class="searchWrap">
+      <view class="searchTxtBox">
+          <input bindconfirm="searchBtn" value="{{inputText}}" id="searchInput" bindinput="keywords" bindfocus="wordsFocus" type="text" placeholder="输入想要的玩具" />
+        </view>
+        <view class="searchBtn" bindtap='searchBtn'>
+          <image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/proList/sort_search.png' />
+        </view>
+    </view>
+    <view bindtap='searchCancel' class="searchCancel {{showSuggestCon == true ? '' : 'hide'}}">取消</view>
+  </view>
+
+  <view class="suggestCon {{showSuggestCon == true ? '' : 'hide'}}">
+			<view class="suggestMask"></view>
+			<view class="suggest-container">
+				<view class="h3">大家都在搜</view>
+				<ul class="suggest-hotkey">
+					<li bindtap="searchli" data-name="乐高">乐高</li>
+					<li bindtap="searchli" data-name="费雪">费雪</li>
+					<li bindtap="searchli" data-name="学步">学步</li>
+					<li bindtap="searchli" data-name="轨道">轨道</li>
+					<li bindtap="searchli" data-name="学习桌">学习桌</li><li bindtap="searchli" data-name="篮球架">篮球架</li><li bindtap="searchli" data-name="厨房">厨房</li><li bindtap="searchli" data-name="滑梯">滑梯</li>
+				</ul>
+			</view>
+		</view>
+
+
+
+  <view class="swiper-tab"> 
+    <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav"><view class="category_title">{{ageName}}</view><image src="../../img/icon/{{currentTab==0 ? 'up' : 'down'}}.png"/></view> 
+    <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav"><view class="category_title">{{brandName}}</view><image src="../../img/icon/{{currentTab==1 ? 'up' : 'down'}}.png"/></view> 
+    <view class="swiper-tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav"><view class="category_title">{{starName}}</view><image src="../../img/icon/{{currentTab==2 ? 'up' : 'down'}}.png"/></view> 
+    <view class="swiper-tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav"><view class="category_title">筛选</view><image src="../../img/icon/{{currentTab==3 ? 'up' : 'down'}}.png"/></view>
+  </view> 
+  
+  <swiper current="{{currentTab}}" class="{{currentTab==5 ? 'swiper-hide' : 'swiper-box'}}" vertical="false" duration="1" style='height:{{winHeight}}px;'  bindchange="bindChange"> 
+    <swiper-item class="agelist"> 
+      <view data-age="" data-name="年龄" class="{{ageId==''?'current' : ''}}" bindtap="swichAge">全部</view>
+       <block wx:for="{{ageList}}" wx:key="id"  wx:for-item="age">
+        <view data-age="{{age.id}}" data-name="{{age.title}}" class="{{ageId==age.id?'current' : ''}}" bindtap="swichAge">{{age.title}}</view>
+       </block>
+    </swiper-item> 
+    <swiper-item class="brandlist"> 
+      <view data-brand="" data-name="品牌" bindtap="swichBrand" class="{{brandId==''?'current' : ''}}">全部品牌</view> 
+      <block wx:for="{{brandList}}" wx:key="id"  wx:for-item="brand">
+        <view data-brand="{{brand.id}}" data-name="{{brand.title}}" bindtap="swichBrand" class="{{brandId==brand.id?'current' : ''}}">{{brand.title}}</view>
+       </block>
+    </swiper-item> 
+    <swiper-item class="starlist"> 
+      <view data-star="" data-name="星级" class="{{starId==''?'current' : ''}}" bindtap="swichStar">全部</view>
+      <view data-star='1' data-name="1" class="{{starId=='1'?'current' : ''}}" bindtap="swichStar">1</view>
+      <view data-star='2' data-name="2" class="{{starId=='2'?'current' : ''}}" bindtap="swichStar">2</view>
+      <view data-star='3' data-name="3" class="{{starId=='3'?'current' : ''}}" bindtap="swichStar">3</view>
+      <view data-star='4' data-name="4" class="{{starId=='4'?'current' : ''}}" bindtap="swichStar">4</view>
+      <view data-star='5' data-name="5" class="{{starId=='5'?'current' : ''}}" bindtap="swichStar">5</view>
+      <view data-star='1,2,3' data-name="1-3" class="{{starId=='1,2,3'?'current' : ''}}" bindtap="swichStar">1-3</view>
+      <view data-star='4,5' data-name="4-5" class="{{starId=='4,5'?'current' : ''}}" bindtap="swichStar">4-5</view>
+    </swiper-item>
+    <swiper-item class="categorylist"> 
+        
+        <view class="filter_header_style clearfix">库存</view>
+        <view class='filter_parent_style'>
+          <view bindtap="swichStock" class="filter_li {{includeEmptyStockGoods == true ? 'current' : ''}}">仅看有货</view> 
+        </view>
+        
+        <view class="filter_header_style clearfix">玩具类型</view>
+        <view class='filter_parent_style'>
+          <block wx:for="{{categoryList}}" wx:key="id" wx:for-index="idx"  wx:for-item="category">
+            <view bindtap="swichCategory" class="filter_li {{categoryParam[idx] == true ? 'current' : ''}}" data-categoryid='{{category.id}}' data-idx='{{idx}}' >{{category.title}}</view>
+          </block>
+        </view>
+        <view class="confirm_filter">
+          <view class="clear_all filter_button_style" bindtap="clearCategory">重置</view>
+          <view class="confirm_select filter_button_style" bindtap="submitCategory">确定</view>
+        </view>
+    </swiper-item>  
+  </swiper> 
+  
+</view>
+<view class="pop-meng {{currentTab==5 ? 'hide' : ''}}"></view>
+<scroll-view scroll-y lower-threshold="50" style="height: 100%;" bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+    <view class="proListCon">
+      <block wx:for="{{proGoods}}" wx:key="goodsId"  wx:for-item="item" wx:for-index="index">
+        <block wx:if="{{item.goodsId != null}}">
+          <navigator url='/pages/proDetail/proDetail?goodsId={{item.goodsId}}'>
+          <view class="proListWrap clearfix">
+            <view class="proListImg">
+              <block wx:for="{{item.images}}" wx:for-item="image" wx:for-index="image_index">
+                  <block wx:if="{{image_index==0}}">
+                    <image class='proImg' src='http://img1.72toy.com/mpb_mtbox{{image.urlPrefix}}_x.jpg'/>
+                  </block>
+                </block>
+                <block wx:if="{{item.logoImageUrlPrefix != null}}">
+                  <image class='proLogo' src='http://img1.72toy.com/mpb_mtbox{{item.logoImageUrlPrefix}}_100x100.png'/>
+                </block>
+            </view>
+            
+            <view class="proListInfo">
+              
+ 		          <view class="proListName">
+                {{item.title}}
+                <view class="gray view_p">
+                  {{item.brand}}
+                  <block wx:for="{{item.departmentTags }}" wx:key="id"  wx:for-item="depart">
+                    {{depart.title }}
+                  </block>
+                </view>
+              </view>
+               <view class="leaseGrade">
+                <view class="starWrap">
+                  <block wx:for="{{item.rentSize}}">
+                    <image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png' class='starImg' />
+                  </block>
+                </view>
+                <view>
+                  <view>
+                    ￥{{item.costPrice/100 }}/天
+                    <image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/free.png' class='memberFree' />  
+                  </view>
+                </view>
+              </view>
+           
+              <view class="proPrice">
+                <view>市场价：{{item.guidePrice/100 }}元</view>
+                <view>适合年龄：{{item.forAgeDescription }}
+                </view>
+              </view>
+
+              <view class="proHeat">
+                <block wx:if="{{item.deliverySizeScale == 11}}">
+                  <view class="iconSize span">超大</view>
+                </block>
+                <block wx:if="{{item.deliverySizeScale == 1}}">
+                  <view class="iconSize span">大</view>
+                </block>
+                <block wx:if="{{item.deliverySizeScale == 2}}">
+                  <view class="iconSize span">中</view>
+                </block>
+                <block wx:if="{{item.deliverySizeScale == 3}}">
+                  <view class="iconSize span">小</view>
+                </block>
+                <block wx:for="{{item.subjectTags}}" wx:key="id"  wx:for-item="tag">
+                   <block wx:if="{{tag.id == 20102741 }}">
+                    <view class="iconHot span">热</view>
+                  </block>
+                  <block wx:if="{{tag.id == 20102743}}">
+                    <view class="iconJian span">荐</view>
+                  </block>
+                </block>
+                <image  class="proLoveImg" data-goodsid="{{item.goodsId}}" src="http://www.72toy.com/mpb_mtbox/v/v3/share/images/proList/love_{{item.inWish==1?'on':'off'}}.png"/>
+              </view>
+            </view>
+          </view>
+         </navigator>
+        </block>
+      </block>
+    </view>
+    <block wx:if="{{hasMore == true}}">
+      <view class="loading zhuan" >正在载入更多...</view>
+    </block>
+    <block wx:if="{{hasMore == false}}">
+      <view class="loading" >没有更多数据...</view>
+    </block>
+ </scroll-view>
+ 

@@ -1,0 +1,240 @@
+page{height: 100%;position:relative;}
+
+/*筛选条件*/
+.top-fix{position: fixed;top: 0;left: 0;z-index:9999;width: 100%; }
+.searchBox{display:-webkit-box;height:43.68px;padding:6.24px 13px;background:#f2f2f2;box-sizing: border-box;-webkit-box-sizing: border-box;}
+.searchWrap{-webkit-box-flex:1;display:-webkit-box;height:26px;text-align: left;background: #fff;border:1px solid #dbdbdb;}
+.searchTxtBox{-webkit-box-flex: 1;}
+.searchWrap input{width:100%;height:26px;padding-left: 10.4px;box-sizing: border-box;-webkit-box-sizing:border-box;border:none;background: none;}
+.searchCancel{line-height:31.2px;padding: 0 10px 0 20px;}
+.searchBtn{width: 41.6px;text-align: center;height: 26px;}
+.searchBtn image{width: 18.72px;height: 16.64px;margin-top:5.2px;opacity: 0.3;}
+
+.suggestMask{position: fixed;top: 44px;left: 0;width: 100%;height: 100%;background: #eee;}
+.status-suggest .searchCancel{display: block;}
+.suggest-container{position: fixed;top: 46.8px;left: 0;background: #f9f9f9;}
+.suggest-container .h3 {
+    color: #999;
+    font-size: 10px;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 16px;
+}
+.suggest-container .suggest-hotkey {
+    padding: 8px 20px 0px;
+}
+.suggest-container .suggest-hotkey li {
+    border: 1px solid #dedede;
+    height: 26px;
+    line-height: 26px;
+    width: inherit;
+    border-radius: 14px;
+    text-align: center;
+    padding: 0 15px;
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 12px;max-width: 5rem;
+    overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+}
+
+
+
+
+
+
+
+.pop-meng{position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 9998;background-color: rgba(0,0,0,0.3);right: 0;bottom: 0;}
+.swiper-tab{ 
+  width: 100%; 
+  border-bottom: 2rpx solid #eeeeee; 
+  text-align: center; 
+  line-height: 80rpx;
+  background: #fff;} 
+.swiper-tab-item{ font-size: 30rpx; 
+  display: inline-block; 
+  width: 25%; 
+  color: #666666; 
+  border-left:1px solid #ddd;
+  box-sizing:border-box;
+  line-height:20px;
+} 
+.swiper-tab-item:first-child{
+  border-left:none;
+}
+.swiper-tab-item image{
+  width:12px;
+  height:12px;
+  margin-top:5px;
+  vertical-align:top;
+  margin-left:3px;
+
+}
+.swiper-box{ display: block; width: 100%; overflow: hidden;background: #fff; } 
+.swiper-hide{ display: hide; width: 100%; overflow: hidden;} 
+.swiper-box view{ 
+  text-align: center; 
+} 
+.on{ 
+  color: #007a9a;
+} 
+.category_title{
+  display: inline-block;
+  max-width: 70%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.agelist view,.starlist view{padding: 10px 0;text-align: center;border-bottom: 1px solid #eee;}
+.brandlist{
+  padding: 15.6px 10.4px 10.4px;
+  text-align: left;
+}
+.brandlist view{
+    height: 20.8px;
+    line-height: 20.8px;
+    text-align: center;
+    padding: 0 13px;
+    display: inline-block;
+    margin: 0 10.4px 10.4px 0;
+    max-width: 260px;
+    background: #dbdbdb;
+    border-radius: 10.4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.agelist .current,.starlist .current{color: #5dae98;}
+.brandlist .current{background: #5dae98;color: #fff;}
+.categorylist .filter_parent_style{
+   text-align: left;
+   border-bottom:1px solid #ddd;
+   margin:0 10px;
+}
+.categorylist .filter_header_style {
+    font-size: 10.4px;
+    color: #333;
+    line-height: 41.6px;
+    height: 41.6px;
+    text-align: left;
+    padding-left: 10.4px;
+    background-color: #fff;
+    margin:0 10px;
+}
+.categorylist .filter_li{
+    border: 1px solid #eee;
+    width: 22%;
+    height: 27.04px;
+    line-height: 27.04px;
+    margin: 5px 1.5%;
+    text-align: center;
+    border-radius: 6px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.categorylist .current{border-color:#5dae98;color: #5dae98;}
+.confirm_filter {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 7.8px 8px;
+    justify-content:flex-end;
+    margin:25px 10px auto;
+}
+
+.confirm_filter .filter_button_style {
+    width: 73.84px;
+    height: 33.28px;
+    line-height: 33.28px;
+    text-align: center;
+    border-radius: 6px
+}
+.confirm_filter .clear_all {
+    margin-right: 26px;
+    border: 1px solid #dbdbdb
+}
+.confirm_filter .confirm_select {
+    background-color: #56d176;
+    color: #fff;
+    border: 1.3px solid #56d176
+}
+
+.proListCon{
+	margin: 85px 10.4px 0;
+}
+.proListWrap{
+	padding-top: 14.56px;
+	padding-bottom: 14.56px;
+	border-bottom: 1px solid #EEEEEE;
+}
+.proListImg{
+	position: relative;float: left;
+	width:50% ;
+}
+.proListImg .proLogo{position: absolute;top:7.8px;left:7.8px;width: 36.4px;height: 36.4px}
+.proListImg .proImg{width: 156px;height: 156px;}
+/*proListInfo*/
+.proListInfo{
+	width: 50%;
+	float: right;
+}
+.proListInfo .proListName{
+	font-size: 15.6px;
+	margin-bottom: 10.4px;
+}
+.proListName .view_p{margin-top:5.2px;font-size: 12.48px;}
+
+.proListInfo .leaseGrade{
+	color: #e74f5c;
+	margin-bottom: 4.16px;
+}
+.starWrap{margin-bottom: 4.16px;}
+.proListInfo .leaseGrade .starImg{
+	width: 11.96px;
+	height: 11.96px;
+  padding-left:1px;
+}
+.proListInfo .leaseGrade .memberFree{
+	width: 45.24px;
+	height: 12.48px;
+}
+.proListInfo .proPrice{
+	color: #8D8D8D;
+	margin-bottom: 10.4px;
+}
+.proListInfo>.proHeat img{
+	height: 19.24px;
+}
+.proHeat .span{display:inline-block;height:19.24px;line-height:19.24px;padding:0 5.2px;font-size:12.48px;color: #fff;}
+.iconSize{background:#8d8d8d;}
+.iconHot{background: #e74f5c;}
+.iconJian{background: #ffb400;}
+.iconNew{background: #007eff;}
+.proListInfo>.proHeat>.proLoveImg{
+	width: 29.12px;
+	height: 29.12px;
+	float: right;
+	margin-top:-10.92px;
+}
+
+.loading{  
+  padding: 10rpx;  
+  text-align: center;  
+}  
+.loading:before{  
+  display: inline-block;  
+  margin-right: 5rpx;  
+  vertical-align: middle;  
+  content: '';  
+  width: 40rpx;  
+  height: 40rpx;   
+  background-size: contain;  
+  animation: rotate 1s linear infinite;  
+}  
+.zhuan:before{
+  background: url(https://www.72toy.com/mpb_mtbox/v/v3/share/images/icon-loading.png) no-repeat; 
+} 

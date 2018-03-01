@@ -1,0 +1,119 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="wrapper">
+  <view class="proTil">
+    <view class="proTilImg">
+      <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="{{indicator_active_color}}" style="height:{{viewHeight}}rpx;">
+      <block wx:for="{{goodsVo.images}}" wx:for-item="image" wx:for-index="image_index">
+        <swiper-item>
+          <image class='proImg slide-image' bindload="imageLoad" src='http://img1.72toy.com/mpb_mtbox{{image.urlPrefix}}_x.jpg' style="width:{{ viewWidth }}rpx; height:{{ viewHeight }}rpx;"/>
+        </swiper-item>
+      </block>
+      <block wx:if="{{goodsVo.product.brand.logoImageUrlPrefix != null}}">
+        <image class='proLogo' src='http://img1.72toy.com/mpb_mtbox{{goodsVo.product.brand.logoImageUrlPrefix}}_100x100.png'/>
+      </block>
+      </swiper>
+    </view>
+
+    <view class="proInfo">
+      <view class="p proInfoName">{{goodsVo.brand }}{{goodsVo.title }} {{goodsVo.product.productCode }} 
+           <block wx:for="{{goodsVo.departmentTags }}" wx:key="id"  wx:for-item="depart">
+              <view class="gray depart">{{depart.title }}</view>
+           </block>
+			</view>
+      <view class="proInfoCon">
+        <view class="view_p">
+          <view class="red">￥{{goodsVo.costPrice/100 }}/天
+            <image class="memberFree" src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/free.png'/>
+          </view>
+		    	
+        </view>
+        <view class="view_p">
+          <view>市场价：{{goodsVo.guidePrice/100 }}元
+             <block wx:for="{{goodsVo.product.rentSize}}">
+                <image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png' class='starImg' />
+              </block>
+          </view>
+         
+        </view>
+        <view class="view_p">
+          <view class="fn-left">适合年龄：
+		    					{{goodsVo.product.forAgeDescription }}
+		    	</view>
+          <view class="proHeat">
+               <block wx:for="{{goodsVo.subjectTags}}" wx:key="id"  wx:for-item="tag">
+                   <block wx:if="{{tag.id == 20102742 }}">
+                    <image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/proList/middle.png'/>
+                  </block>
+                   <block wx:if="{{tag.id == 20102741 }}">
+                   <image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/proList/hot.png'/>
+                  </block>
+                  <block wx:if="{{tag.id == 20102743}}">
+                    <image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/proList/recommend.png'/>
+                  </block>
+                </block>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="proParam">
+    <view class="view_p">玩具参数</view>
+    <view class="proParamDetail">
+      <view class="table">
+        <view class="tr">
+          <view class="th">玩具品牌</view>
+          <view class="td">{{goodsVo.brand}}{{goodsVo.englishBrand}}</view>
+        </view>
+        <view class="tr">
+          <view class="th">品牌所属</view>
+          <view class="td">{{goodsVo.product.brand.authorName}}{{goodsVo.availableStock}}</view>
+        </view>
+        <view class="tr">
+           <view class="th">玩具材质</view>
+          <view class="td">{{goodsVo.product.material}}</view>
+        </view>
+        <view class="tr">
+          <view class="th">玩具重量</view>
+          <view class="td">{{goodsVo.product.weight}}g</view>
+        </view>
+        <view class="tr">
+          <view class="th">配件数量</view>
+          <view class="td">{{goodsVo.product.partsCount}}</view>
+        </view>
+        <view class="tr">
+          <view class="th">电池信息</view>
+          <view class="td">{{goodsVo.product.partsDescription}}<block wx:if="{{goodsVo.product.partsDescription != null && goodsVo.product.partsDescription != ''}}">（需自备）</block></view>
+        </view>
+        <view class="tr">
+          <view class="th">消毒方式</view>
+          <view class="td">酒精/季铵盐消毒、紫外线消毒、蒸汽消毒</view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+  <view class="proIntro ">
+			<view class="showProImg">
+				<view class="p">玩具展示</view>
+           <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+			</view>
+		</view>	
+  </view>
+
+  <view class="footFixed">
+    <view class="footer">
+      <view class="addFavorite" bindtap="{{onWish == false?'addWish':''}}">
+        <view class='fn-left fn-image'>
+         <image class="on" src="http://www.72toy.com/mpb_mtbox/v/v3/share/images/proDetail/{{onWish == true? 'addFav' : 'noaddFav'}}.png"/>
+        </view>
+        <view wx:if="{{onWish == false}}" class="fn-left span">加入心愿单</view>
+        <view wx:if="{{onWish == true}}" class="fn-left span">已加入心愿单</view>
+      </view>
+
+      
+    </view>
+  </view>

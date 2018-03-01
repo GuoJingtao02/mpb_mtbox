@@ -1,0 +1,66 @@
+<view class="ctCount clearfix {{editWord == '0' ? 'hide' : ''}}">
+    <view class="fn-left ctWord">
+      已经收藏<span id="wish-count">{{wishLength}}</span>个宝贝
+    </view>
+    <view class="edit fn-right">
+      <span class="editWord" bindtap="edit" data-editword = "0">编辑</span>
+    </view>
+  </view>
+  <view class="completeWrap clearfix {{editWord == '0' ? '' : 'hide'}}">
+    <view class="allCheckedWrap fn-left">
+      <view bindtap='selectAll' class="{{selectAll == true ? 'checked' : 'allChecked'}}">全选</view>
+    </view>
+    <view class="complete fn-right">
+      <span class="editWord" bindtap="edit" data-editword = "1">完成</span>
+    </view>
+  </view>
+
+  <block wx:for="{{wishList}}" wx:key="id" wx:for-index="index">
+    <view class="ctListWrap clearfix">
+        <view class="ctListItem clearfix" >
+           <view class="checkedWrap fn-left {{editWord == '0' ? '' : 'hide'}}" data-goodsid="{{item.goodsId}}" data-index= "{{index }}" bindtap='selectItem'>
+            <label class="{{wishSelect[index] == true ? 'checked' : 'nochecked'}} select-goods"   ></label>
+          </view>
+					<view class="ctProImg fn-left">
+            <block wx:for="{{item.images}}" wx:key="id" wx:for-item="image" wx:for-index="image_index">
+              <block wx:if="{{image_index==0}}">
+                <image class='proImg' src='http://img1.72toy.com/mpb_mtbox{{image.urlPrefix}}_x.jpg'/>
+              </block>
+            </block>
+						 <block wx:if="{{item.product.brand.logoImageUrlPrefix != null}}">
+              <image class='proLogo' src='http://img1.72toy.com/mpb_mtbox{{item.product.brand.logoImageUrlPrefix}}_100x100.png'/>
+            </block>
+					</view>
+
+          <view class='ctproInfopar'>
+            <view class="ctproInfo fn-left">
+              <view wx:if="{{item.product.productName != null && item.product.productName != ''}}"> {{item.product.productName}} </view>
+              <view wx:if="{{item.product.productName == null || item.product.productName == ''}}" >{{item.title}}</view>
+              <view class="red">￥{{item.costPrice/100 }}/天<image class="freeImg" src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/free.png'/></view>
+              <view class="span red">租赁等级:	<image wx:for="{{item.product.rentSize}}" wx:key="item" src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png' class="starImg"/></view>
+            </view>
+            <view bindtap='deleteone' data-goodsindex='{{index}}' data-goodsid='{{item.goodsId}}' class="deleteIcon fn-right {{editWord == '0' ? '' : 'hide'}}">
+              <image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/delete.png'/>
+            </view>
+          </view>
+
+				</view>
+    </view>
+  </block>
+ 
+    <view bindtap='goList' class="btn-wrap" wx:if='{{wishLength == 0}}' style="position:fixed;left:0;bottom:55px;width:100%">
+	   		<view class='btn'>去玩具库看看玩具</view>
+	  </view>
+ 
+  <view class="footFixed {{editWord == '0' ? '' : 'hide'}}">
+    <view class="footer" style="height:47px;">
+        <view class="deleteAll clearfix">
+      <view class="deleteCount fn-left">
+        已选 <view class="span">{{selectItem.length}}/{{wishLength}}</view>
+      </view>
+      <view class="deleteBtn fn-right ">
+        <button bindtap='deleteBeach' type="button">删除</button>
+      </view>
+    </view>
+    </view>
+  </view>

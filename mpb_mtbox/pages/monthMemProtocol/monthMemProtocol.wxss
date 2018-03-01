@@ -1,0 +1,9 @@
+.protocolTIt{padding:15.6px 0;text-align:center;font-size: 14.56px;}
+.protocolCon{padding: 0 15.6px 20.8px;}
+.protocolCon p{margin-bottom: 10.4px;}
+.ptlDl dt{margin-bottom:5.2px;font-weight: 700;}
+.ptlDl dd{margin-bottom: 10.4px;}
+.ptlDl li{margin-bottom:10.4px;list-style: decimal;padding-left:15px;position: relative
+}
+.ptlDl li p{margin-top: 5.2px;}
+.li_disc{display: inline;position: absolute;left: 0px;top: 0px;}

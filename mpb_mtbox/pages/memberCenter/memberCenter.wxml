@@ -1,0 +1,68 @@
+<view class="mobileLogin">
+	<view class="personInfo">
+		<view class="portraitWrap"><image alt="头像" width="50px;" height="50px;" src="{{memUserData.imgUrl == null ? 'https://www.72toy.com/mpb_mtbox/v/v3/share/images/indexPc/logo1.png' : memUserData.imgUrl}}" /></view>
+		<view class="Info">
+			<span class="userPhone">{{memUserData.mobile }}</span>
+		</view>
+		<navigator class='hide' href="/mpb_mtbox/m/membership/inf/currentOrder" style="position:absolute;right: 12px;top: 17px;color:#fff;">查看当前订单</navigator>
+	</view>
+</view>
+<view class='userState clearfix'>
+  <block wx:if="{{memUserData.commonMember == 0}}">
+    <view class="userLevel fn-left" >
+        <image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/userLevelIcon.png'/>
+        标准会员
+    </view>
+    <view class="upgradeMem fn-right">
+      <view wx:if="{{memUserData.status.endTime == null}}" class='p'>
+          服务有效期将在收到第一个玩具时开始
+      </view>
+      <view wx:if="{{memUserData.status.endTime != null}}" class='p'>
+          服务
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{memUserData.commonMember == 1}}">
+    <view class="userLevel fn-left" >
+        <image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/userLevelIcon.png'/>
+        高级会员
+    </view>
+    <view class="upgradeMem fn-right">
+      <view wx:if="{{memUserData.status.endTime == null}}" class='p'>
+          服务有效期将在收到第一个玩具时开始
+      </view>
+      <view wx:if="{{memUserData.status.endTime != null}}" class='p'>
+          服务
+      </view>
+    </view>
+  </block>
+    <block wx:if="{{memUserData.commonMember == 2}}">
+      <view class="userLevel fn-left" >
+          <image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/userLevelIcon.png'/>
+          普通会员
+      </view>
+    </block>
+</view>
+
+<view class="userMenu">
+	<view class="userInfo">
+		<ul>
+			<li class="myList hide jt"><navigator url='/pages/step2/step2'><image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/myList.png' />我要租玩具</navigator></li>
+			<li class="myCollect jt" bindtap="gowish"><image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/myCollect.png'/>我的心愿单</li>
+			<li class="myCoupon jt"><navigator url='/pages/coupon/coupon'><image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/myCoupon.png' />优惠券</navigator></li>
+		</ul>
+	</view>
+	
+	<view class="userDynamic">
+		<ul>
+			<li class="inviteFriends"><image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/InviteFriends.png' />邀请朋友(邀请码:<span style="color: red">{{memUserData.status.userId}}</span>)</li>
+			<li class="question jt"><navigator url='/pages/question/question'><image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/question.png' />常见问题</navigator></li>
+			<li class="contact"><image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/contact.png' />联系客服 <span>13651947472/17301807065</span></li>
+		</ul>
+	</view>
+
+	<view class="signOut">
+		<button class="signOutBtn hide"  type="button">退出登陆</button>
+	</view>
+
+</view>

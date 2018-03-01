@@ -1,0 +1,141 @@
+<!--pages/step2/step2.wxml-->
+<view class="header">
+  <view class="step">
+    <view class="currented">step1</view>
+    <view class="current">step2</view>
+    <view>step3</view>
+  </view>
+  <view class="step_tip">
+    <view class="step1">按照单租计算价格(默认10天)</view>
+    <view class="step2">按照单租计算价格(默认10天)</view>
+    <view class="step3">按照单租计算价格(默认10天)</view>
+    <image class="tipClose" src="https://www.72toy.com/mpb_mtbox/v/v3/share/images/step/icon_colse.png"></image>
+  </view>
+</view>
+
+<view class="proRelet">
+  <view id="proList" class="clearfix">
+
+  </view>
+  <!-- tip start -->
+  <view class="tipWrap hide">
+    <view class="msg">所选玩具超过星数 无法加入</view>
+  </view>
+  <!-- tip start -->
+
+</view>
+
+<view class="myCollect">
+  <view class="wordWrap">
+    <view class="">我的收藏</view>
+  </view>
+  <view class="collectListWrap oz">
+
+    <view class="oz li_oz" id="1">
+      <view class="fl">
+        <image src="http://img1.72toy.com/mpb_mtbox/2010/6706/6715/6726/20103162/images/1_240x240.jpg"></image> 
+      </view>
+      <view class="fr">
+        <view class='fr-p'>大鼓（长背带）</view>
+        <view class="star-img">
+          <image src="https://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png" class="star"></image>
+        </view>
+        <view class="rentBtn" rentsize="2" goodsid="20103556" href="javascript:;">选租</view>
+      </view>
+    </view>
+    <view class="oz li_oz" id="1">
+      <view class="fl">
+        <image src="http://img1.72toy.com/mpb_mtbox/2010/6706/6715/6726/20103162/images/1_240x240.jpg"></image> 
+      </view>
+      <view class="fr">
+        <view class='fr-p'>大鼓（长背带）</view>
+        <view class="star-img">
+          <image src="https://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png" class="star"></image>
+        </view>
+        <view class="rentBtn" rentsize="2" goodsid="20103556" href="javascript:;">选租</view>
+      </view>
+    </view>
+    <view class="oz li_oz" id="1">
+      <view class="fl">
+        <image src="http://img1.72toy.com/mpb_mtbox/2010/6706/6715/6726/20103162/images/1_240x240.jpg"></image> 
+      </view>
+      <view class="fr">
+        <view class='fr-p'>大鼓（长背带）</view>
+        <view class="star-img">
+          <image src="https://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png" class="star"></image>
+        </view>
+        <view class="rentBtn" rentsize="2" goodsid="20103556" href="javascript:;">选租</view>
+      </view>
+    </view>
+    <view class="oz li_oz" id="1">
+      <view class="fl">
+        <image src="http://img1.72toy.com/mpb_mtbox/2010/6706/6715/6726/20103162/images/1_240x240.jpg"></image> 
+      </view>
+      <view class="fr">
+        <view class='fr-p'>大鼓（长背带）</view>
+        <view class="star-img">
+          <image src="https://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png" class="star"></image>
+        </view>
+        <view class="rentBtn" rentsize="2" goodsid="20103556" href="javascript:;">选租</view>
+      </view>
+    </view>
+    <view class="oz li_oz" id="1">
+      <view class="fl">
+        <image src="http://img1.72toy.com/mpb_mtbox/2010/6706/6715/6726/20103162/images/1_240x240.jpg"></image> 
+      </view>
+      <view class="fr">
+        <view class='fr-p'>大鼓（长背带）</view>
+        <view class="star-img">
+          <image src="https://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png" class="star"></image>
+        </view>
+        <view class="rentBtn" rentsize="2" goodsid="20103556" href="javascript:;">选租</view>
+      </view>
+    </view>
+    <view class="oz li_oz" id="1">
+      <view class="fl">
+        <image src="http://img1.72toy.com/mpb_mtbox/2010/6706/6715/6726/20103162/images/1_240x240.jpg"></image> 
+      </view>
+      <view class="fr">
+        <view class='fr-p'>大鼓（长背带）</view>
+        <view class="star-img">
+          <image src="https://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png" class="star"></image>
+        </view>
+        <view class="rentBtn" rentsize="2" goodsid="20103556" href="javascript:;">选租</view>
+      </view>
+    </view>
+    <view class="oz li_oz" id="1">
+      <view class="fl">
+        <image src="http://img1.72toy.com/mpb_mtbox/2010/6706/6715/6726/20103162/images/1_240x240.jpg"></image> 
+      </view>
+      <view class="fr">
+        <view class='fr-p'>大鼓（长背带长背带长背带长背带长背带长背带长背带长背带长背带长背带长背带长背带长背带）</view>
+        <view class="star-img">
+          <image src="https://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png" class="star"></image>
+        </view>
+        <view class="rentBtn" rentsize="2" goodsid="20103556" href="javascript:;">选租</view>
+      </view>
+    </view>
+    <view class="oz li_oz" id="1">
+      <view class="fl">
+        <image src="http://img1.72toy.com/mpb_mtbox/2010/6706/6715/6726/20103162/images/1_240x240.jpg"></image> 
+      </view>
+      <view class="fr">
+        <view class='fr-p'>大鼓（长背带）</view>
+        <view class="star-img">
+          <image src="https://www.72toy.com/mpb_mtbox/v/v3/share/images/step/star.png" class="star"></image>
+        </view>
+        <view class="rentBtn" rentsize="2" goodsid="20103556" href="javascript:;">选租</view>
+      </view>
+    </view>
+    
+  </view>
+</view>
+
+<view class="footer-g">
+  <view class="btn-wrap">
+    <view class="btn" href="/mpb_mtbox/v/membership/pro/index">查看玩具库</view>
+  </view>
+  <view class="whiteBgBtnWrap oz">
+    <view type="button" class='button'>确认去下一步</view>
+  </view>
+</view>

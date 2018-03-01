@@ -1,0 +1,32 @@
+<view class="regBanner">
+  <image src='http://www.72toy.com/mpb_mtbox/v/v3/share/images/register/login_banner.jpg' />
+</view>
+<view class="user_form" method="post">
+  <view class="user_phone_field">
+    <input type="number" maxlength="11" bindinput="inputMobile" placeholder="请输入11位手机号码"/>
+    <block wx:if="{{yzming == false}}">
+      <view class="get_yzm" bindtap="getyzm" >获取验证码</view>
+    </block>
+    <block wx:if="{{yzming == true}}">
+      <view class="get_yzm gray" >再次获取（{{yzm_time}}）</view>
+    </block>
+    
+  </view>
+  <view class="user_yzm">
+    <input type="text" name="inputVerifyCode" bindinput="inputVerifyCode"  value="" placeholder="请输入验证码"/>
+  </view>
+  <view class="user_invite">
+    <input type="text" name="inputInviteCode" bindinput="inputInviteCode" placeholder="如获得邀请码/优惠码，请输入。" />
+  </view>
+  <view class="user_protocol">
+    <label bindtap='readProtocolFun'>
+      <image src="http://www.72toy.com/mpb_mtbox/v/v3/share/images/icon_{{readProtocol == true ? 'on' : 'off'}}.png" />
+      <view class='span'>已阅读并将遵守</view>
+    </label>
+    <navigator url="/pages/leaseProtocol/leaseProtocol">用户协议</navigator>
+  </view>
+  <view class="user_commit">
+    <view class="commit" bindtap='login'>登录</view>
+    <view class="tipWrap {{showTipWrap == true?'':'hide'}}"><view class="span msg">{{msg}}</view></view>
+  </view>
+  </view>

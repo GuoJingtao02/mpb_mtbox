@@ -1,0 +1,17 @@
+.protocolWrap{padding:0 15px;}
+.protocolTIt{font-weight:700;margin-bottom:15px;}
+.bt{margin-bottom:10px;}
+.b{font-weight: 700;}
+.b_bottom{border-bottom: 1px solid #ddd;}
+.b_right{border-right: 1px solid #ddd;}
+.ptlTable{border-top:1px solid #ddd;border-left:1px solid #ddd;border-right:1px solid #ddd;line-height: 24px;}
+.ptlTable view view{padding: 0 5px;}
+.tc{text-align: center;}
+.oz{overflow: hidden;}
+.w-50{width:50%;}
+.left{float:left;}
+.box-b{box-sizing: border-box;}
+.f14{font-size: 14px;}
+.tableTit{line-height:30px;}
+.w-33{width:33.3%;}
+.ptb{padding: 10px 0;}
