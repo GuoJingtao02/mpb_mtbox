@@ -10,14 +10,18 @@ Page({
     useedList:[],
     timeOutList:[],
     discountCode:'',
-    inputText:''
+    inputText:'',
+    planId:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    var planId = options.planId;
+    this.setData({
+      planId:planId
+    })
   },
 
   /**
@@ -75,7 +79,7 @@ Page({
     var that = this;
     wx.request({
       url: 'https://www.72toy.com/mpb_mtbox/v/membership/rest/member/coupon',//
-      data: { sessionId: wx.getStorageSync('3rd_session') },
+      data: { sessionId: wx.getStorageSync('3rd_session'),planId:that.data.planId },
       header: {
         "Content-Type": "applciation/json",
       },
@@ -133,5 +137,23 @@ Page({
       }
     })
     
+  },
+  useDiscount:function(e){
+    var discountCode = e.currentTarget.dataset.discountcode;
+    var discountMoney = e.currentTarget.dataset.discountmoney;
+
+    let pages = getCurrentPages(); //获取当前页面js里面的pages里的所有信息。
+
+    let prevPage = pages[pages.length - 2];
+    var discount = '';
+    
+    discount = {"discountCode":discountCode,"discountMoney":discountMoney};
+
+    prevPage.setData({  
+      discount:discount
+    })
+    wx.navigateBack({
+      delta:1
+    })
   }
 })

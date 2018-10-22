@@ -47,7 +47,7 @@
 <view class="userMenu">
 	<view class="userInfo">
 		<ul>
-			<li class="myList hide jt"><navigator url='/pages/step2/step2'><image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/myList.png' />我要租玩具</navigator></li>
+			<li class="myList jt"><navigator url='/pages/step2/step2'><image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/myList.png' />我要租玩具</navigator></li>
 			<li class="myCollect jt" bindtap="gowish"><image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/myCollect.png'/>我的心愿单</li>
 			<li class="myCoupon jt"><navigator url='/pages/coupon/coupon'><image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/myCoupon.png' />优惠券</navigator></li>
 		</ul>

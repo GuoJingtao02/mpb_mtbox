@@ -27,7 +27,7 @@
 </view>
 <view class='perfectBaByInfo'>
 	<view class='memberWrap clearfix'>
-    <navigator url='/pages/commonMember/commonMember'>
+    <navigator url='/pages/zf/zf?type=0'>
       <view class='commonMember fn-left' >
         <view class='h3'>【享  玩】VIP标准会员</view>
         <view class='memBenefit'>
@@ -38,7 +38,7 @@
         <p class="price"> <span>¥</span>154/月起</p>
       </view>
     </navigator >
-    <navigator url='/pages/seniorMember/seniorMember'>
+    <navigator url='/pages/zf/zf?type=1'>
 		  <view class="seniorMember fn-right">
         <view class='h3'>【享  玩】VIP高级会员</view>
         <view class="memBenefit">

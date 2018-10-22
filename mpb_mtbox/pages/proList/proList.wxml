@@ -53,9 +53,11 @@
       <view data-star='2' data-name="2" class="{{starId=='2'?'current' : ''}}" bindtap="swichStar">2</view>
       <view data-star='3' data-name="3" class="{{starId=='3'?'current' : ''}}" bindtap="swichStar">3</view>
       <view data-star='4' data-name="4" class="{{starId=='4'?'current' : ''}}" bindtap="swichStar">4</view>
-      <view data-star='5' data-name="5" class="{{starId=='5'?'current' : ''}}" bindtap="swichStar">5</view>
       <view data-star='1,2,3' data-name="1-3" class="{{starId=='1,2,3'?'current' : ''}}" bindtap="swichStar">1-3</view>
       <view data-star='4,5' data-name="4-5" class="{{starId=='4,5'?'current' : ''}}" bindtap="swichStar">4-5</view>
+      <view data-star='5,6,7' data-name="5星及以上" class="{{starId=='5,6,7'?'current' : ''}}" bindtap="swichStar">5星及以上</view>
+      
+     
     </swiper-item>
     <swiper-item class="categorylist"> 
         

@@ -1,5 +1,6 @@
 {
   "pages": [
+    
     "pages/proList/proList",
     "pages/index/index",
     "pages/logs/logs",
@@ -15,7 +16,9 @@
     "pages/choosePay/choosePay",
     "pages/step2/step2",
     "pages/question/question",
-    "pages/selPlan/selPlan"
+    "pages/selPlan/selPlan",
+    "pages/zf/zf",
+    "pages/getuserInfo/getuserInfo"
   ],
   "tabBar": {
     "color": "#000000",
@@ -35,13 +38,8 @@
         "text": "心愿单",
         "iconPath": "img/icon/heart.png",
         "selectedIconPath": "img/icon/heart_s.png"
-      },
-      {
-        "pagePath": "pages/memberCenter/memberCenter",
-        "text": "我的",
-        "iconPath": "img/icon/face.png",
-        "selectedIconPath": "img/icon/face_s.png"
       }
+     
     ]
   },
   "window": {

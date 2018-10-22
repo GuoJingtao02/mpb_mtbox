@@ -172,7 +172,7 @@ Page({
       if (e.currentTarget.dataset.current == 3) {
         that.setData({
           currentTab: e.currentTarget.dataset.current,
-          winHeight: 370
+          winHeight: 450
         });
       } else {
         that.setData({

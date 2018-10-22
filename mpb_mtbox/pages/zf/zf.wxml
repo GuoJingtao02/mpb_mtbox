@@ -1,0 +1,77 @@
+<view class='title'>
+  
+  <block wx:if="{{loadType == '0'}}">
+    <view class='title_name'>标准会员</view>
+    <navigator url='/pages/zf/zf?type=1'>→查看高级会员</navigator>
+    <view class='desc'>可同时玩1-3件玩具,累计3★的玩具</view>
+  </block>
+   <block wx:if="{{loadType == '1'}}">
+    <view class='title_name'>高级会员</view>
+    <navigator url='/pages/zf/zf?type=0'>→查看标准会员</navigator>
+    <view class='desc'>可同时玩1-5件玩具,累计5★的玩具</view>
+  </block>
+  
+</view>
+<swiper class="swiper" next-margin="140rpx" current-item-id="{{currentItemId}}" previous-margin="140rpx" bindchange="swiperChange">  
+  <block wx:for="{{planList}}" wx:key="id">
+    <swiper-item item-id="{{item.plan.planId}}"  data-item-id="{{item.plan.planId}}" bindtap='clickChange'>  
+     <view class='li'>
+      <view class='li1 {{currentItemId == item.plan.planId ? "selected" : ""}}' style='background: url({{item.plan.temp1}});'>
+        <view class='plan_name' style='color:{{item.plan.temp2}}'>{{item.plan.planName}}</view>
+        <view class='service_time' style='color:{{item.plan.temp2}}'>租赁时长{{item.plan.serviceTime}}个月</view>
+      </view>
+     </view> 
+    </swiper-item>  
+    </block>
+</swiper> 
+  <view class='price'>
+    <view class='li'>
+      <view class='fl'>原价</view>
+      <view class='fr'>￥{{servicePrice/100}}</view>
+    </view>
+    <view class='li'>
+      <view class='fl'>长期卡现时折扣</view>
+      <view class='fr'>-￥{{(servicePrice-realPrice)/100}}</view>
+    </view>
+    <view class='li'>
+      <view class='fl'>服务券(显示赠送）</view>
+      <view class='fr'>{{changeCount}}张</view>
+    </view>
+  </view>
+  <view class='price'>
+      <view class='li'>
+        <view class='fl'>押金</view>
+        <view class='fr'>￥{{payDeposit/100}}</view>
+      </view>
+      <view class='li'>
+        <view class='fr' style='color:red'>第一次收件时支付</view>
+      </view>
+  </view>
+  <view class='price'>
+    <view class='li'>
+        <view class='fl'>优惠券</view>
+        <block wx:if="{{discount == ''}}">
+          <view class='fr' style='color:#ddd;' bindtap='selCoupon'>选择优惠券 ></view>
+        </block>
+        <block wx:if="{{discount != ''}}">
+          <view class='fr' style='color:red;' bindtap='selCoupon'>-￥{{discount.discountMoney/100}}</view>
+        </block>
+        
+      </view>
+  </view>
+  <view class='protocol'>
+    *付费成为会员代表您已经阅读并同意<navigator url='/pages/monthMemProtocol/monthMemProtocol'>享玩用户协议</navigator>
+  </view>
+  <view class='footer'>
+    <view class='fl'>
+       <block wx:if="{{discount == ''}}">
+         <view class='tp'>总价：<text>￥{{(realPrice)/100}}</text></view>
+        </block>
+        <block wx:if="{{discount != ''}}">
+          <view class='tp'>总价：<text>￥{{(realPrice-discount.discountMoney)/100}}</text></view>
+        </block>
+      
+      <view class='yj'>押金{{payDeposit/100}}元，将在收到第一批玩具时支付</view>
+    </view>
+    <view class='fr' bindtap='pay'>去支付</view>
+  </view>

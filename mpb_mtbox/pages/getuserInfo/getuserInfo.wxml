@@ -1,0 +1,6 @@
+<view class='img'>
+  <image src='https://open.weixin.qq.com/cgi-bin/openproxy?url=http%3A%2F%2Fwx.qlogo.cn%2Fmmhead%2FQ3auHgzwzM4VfCXIv0kRIHRd5cx6uibloX7hia2kDa1qhVoo7rOgjx9w%2F0'></image>
+</view>
+<view class="tishi">该小程序由享玩开发,向其提供以下权限即可继续操作</view>
+<view class="xinxi">. 获得你的公开信息（昵称、头像等）</view>
+<button open-type='getUserInfo' lang="zh_CN" bindgetuserinfo="onGotUserInfo">确认登陆</button>

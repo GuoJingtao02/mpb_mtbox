@@ -18,7 +18,7 @@
 	
   <view class="expired nouse {{typeli==1 ? '' : 'hide'}}">
     <block wx:for="{{noUseList}}" wx:key="id">
-			<view class="cpItem ">
+			<view class="cpItem " data-discountmoney="{{item.discount.discountMoney}}" data-discountcode="{{item.discount.discountCode}}" bindtap='useDiscount'>
         <view class='cp-item-child clearfix'>
           <view class="fn-left">
             <view class='p'>{{item.discount.descRemark }}</view>
@@ -73,7 +73,7 @@
             <view class='p'>抵用券</view>
             <view class="p money">￥{{timeOut.discount.discountMoney/100 }}</view>
             <view class="used_icon">
-              <image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/used_icon.png'/>
+              <image src='https://www.72toy.com/mpb_mtbox/v/v3/share/images/memCenter/expired_icon.png'/>
             </view>
           </view>
         </view>
